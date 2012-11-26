@@ -1,0 +1,25 @@
+- content_for :title do
+ - @page.title
+
+= render @page
+
+- if @page.has_comments
+  .comments#comments
+    h3.title <span class="count">#{@page.comments_count || 0}</span> #{'Comment'.pluralize(@page.comments_count)}
+    .comment-added
+      | Comment successfully added. <a href="#" class="bottom-btn">View comment</a>.
+      | <a href="#" class="close-btn">×</a>
+    .comment-form
+      = simple_form_for @comment, remote: true, html: { 'data-update' => '.comments' } do |f|
+        = f.input :page_id, as: :hidden, input_html: { value: @page.id }
+        = f.input :name, label: false, placeholder: 'name', input_html: { value: cookies[:comment_name] }
+        = f.input :email, label: false, placeholder: 'email', input_html: { value: cookies[:comment_email] }
+        = f.input :url, label: false, placeholder: 'http://', input_html: { value: cookies[:comment_url] }
+        = f.input :comment, label: false, placeholder: 'leave a message...'
+        = f.submit 'Post Comment', class: 'btn add-comment'
+        .remember-me
+          label
+            = check_box_tag 'remember_me', 1, true
+            span Remember Me?
+
+    = render partial: 'comments/comment', collection: @page.comments.order('created_at ASC')

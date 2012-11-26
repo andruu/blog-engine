@@ -1,0 +1,11 @@
+- content_for :title do
+ - 'Archives'
+
+.post
+  h1.title Archives
+  - @posts.each do |month|
+    h3 = month.first
+    ul
+      - month[1].each do |post|
+        li = link_to post.title, page_path(post.slug)
+    

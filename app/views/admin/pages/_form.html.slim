@@ -1,0 +1,16 @@
+= simple_form_for [:admin, @page] do |f|
+  - if @page.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+      ul
+        - @page.errors.full_messages.each do |message|
+          li = message
+
+  = f.input :title, input_html: { class: 'title' }
+  = f.input :slug, input_html: { class: 'slug' }
+  = f.input :page_type, label: 'Type', collection: %w(post page), as: :radio_buttons
+  = f.input :has_comments
+  = f.input :is_published
+  #epiceditor
+  = f.input :body, label: false
+  .actions = f.submit 'Save Page', class: 'btn'

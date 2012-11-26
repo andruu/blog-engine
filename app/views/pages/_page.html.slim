@@ -1,0 +1,13 @@
+.post
+  - if page.page_type == 'post'
+    .comment-count
+      i.icon-comments
+      span.count = page.comments_count || 0
+    .date <i class="icon-calendar"></i> #{page.created_at.to_formatted_s(:proper)}
+  .title
+    - if params[:action] == 'index'
+      = link_to page.title, page_path(page.slug)
+    - else
+      = page.title
+  .body
+    = markdown page.body

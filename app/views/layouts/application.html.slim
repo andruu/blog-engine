@@ -1,0 +1,57 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title = content_for?(:title) ? yield(:title) + " · andru.co" : "andru.co"
+    = csrf_meta_tags
+
+    /! Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag "application", :media => "all"
+    
+  body
+    .top-stripe
+    .header
+      .container
+        .logo
+          a href="/"
+            span.andru andru
+            span.co .co
+        ul
+          li = link_to 'about', '/about'
+          li = link_to 'archives', '/archives'
+          li = link_to 'work', '/work'
+          li = link_to 'rss', '/feed.atom'
+
+    .container
+      .main
+        = yield
+      .side-bar
+        .side
+          .top-btn <i class="icon-caret-up"></i>
+          h4.name Andrew Weir
+          p.about Web developer specializing in Ruby, Node.js and PHP.
+          
+          ul.links
+            li
+              a href="http://www.github.com/andruu" <i class="icon-github"></i> GitHub
+            li
+              a href="http://www.twitter.com/andruu" <i class="icon-twitter"></i> Twitter
+            li
+              a href="http://www.linkedin.com/in/andruu" <i class="icon-linkedin"></i> LinkedIn
+
+          h4.recent <i class="icon-time"></i> Recent Posts
+          ul.recent-posts
+            - Page.published_posts.order('created_at DESC').limit(3).each do |page|
+              li = link_to page.title, page_path(page.slug)
+
+      .breaker
+
+    /!
+      Javascripts
+      \==================================================
+    /! Placed at the end of the document so the pages load faster
+    = javascript_include_tag "application"

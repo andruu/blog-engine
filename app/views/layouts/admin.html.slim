@@ -1,0 +1,37 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title = content_for?(:title) ? yield(:title) : "andru.co"
+    = csrf_meta_tags
+
+    /! Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag "application", :media => "all"
+
+  body
+    .top-stripe
+    .header
+      .container
+        .logo
+          a href="/admin"
+            span.andru andru
+            span.co .co
+            span.admin &nbsp;admin
+        ul
+          li = link_to 'home', root_path
+
+    .container
+      = yield
+
+
+      .breaker
+
+    /!
+      Javascripts
+      \==================================================
+    /! Placed at the end of the document so the pages load faster
+    = javascript_include_tag "admin"

@@ -1,0 +1,9 @@
+- if comment.url.blank?
+  - name = comment.name
+- else
+  - name = link_to comment.name, comment.url
+
+.comment
+  .gravatar = gravatar_image_tag comment.email, gravatar: { size: 36 }
+  .about <strong>#{name}</strong> &middot; #{time_ago_in_words comment.created_at}
+  .body = markdown html_escape(comment.comment)
