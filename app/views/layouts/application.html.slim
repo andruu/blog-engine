@@ -4,6 +4,7 @@ html lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    link href="http://feeds.feedburner.com/Andruco" rel="alternate" title="andru.co" type="application/atom+xml"
     title = content_for?(:title) ? yield(:title) + " · andru.co" : "andru.co"
     = csrf_meta_tags
 
@@ -25,7 +26,7 @@ html lang="en"
           li = link_to 'about', '/about'
           li = link_to 'archives', '/archives'
           li = link_to 'work', '/work'
-          li = link_to 'rss', '/feed.atom'
+          li = link_to 'rss', 'http://feeds.feedburner.com/Andruco'
           - if current_user
             li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
             li = link_to 'admin', '/admin'
