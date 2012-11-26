@@ -1,0 +1,10 @@
+.post
+  h1.title Search results for #{params[:query]}
+  - @posts.each do |post|
+    .search-result
+      strong
+        = link_to post.title, page_path(post.slug)
+
+      p == highlight(excerpt(strip_tags(markdown(post.body)), params[:query], radius: 60), params[:query])
+
+= will_paginate @posts, page_links: false

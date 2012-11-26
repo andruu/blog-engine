@@ -11,4 +11,12 @@ class Page < ActiveRecord::Base
   validates :slug, presence: true, uniqueness: true, length: { in: 3..255 }
   validates :body, presence: true, length: { minimum: 100 }
 
+  def self.text_search(query)
+    if query.present?
+      search(title: query, body: query)
+    else
+      scoped
+    end
+  end
+
 end

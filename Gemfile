@@ -32,6 +32,7 @@ gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.0.0'
 gem 'gravatar_image_tag'
 gem 'thin'
+gem 'texticle', "2.0", :require => 'texticle/rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

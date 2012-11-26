@@ -25,4 +25,9 @@ class PagesController < ApplicationController
     end
 
   end
+
+  def search
+    @posts = Page.text_search(params[:query]).paginate(:page => params[:page], :per_page => 10)
+  end
+
 end

@@ -21,6 +21,10 @@ html lang="en"
           a href="/"
             span.andru andru
             span.co .co
+        .search
+          form method="get" action="#{search_path}"
+            input name="query" type="search" placeholder="search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'search...'" value="#{params[:query]}"
+
         ul
 
           li = link_to 'about', '/about'

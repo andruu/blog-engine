@@ -15,10 +15,8 @@
 //= require turbolinks
 //= require jquery.turbolinks
 //= require main
+//= require css_browser_selector
 
 $(document).ready(function () {
 
 });
-
-
-

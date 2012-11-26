@@ -16,6 +16,8 @@ Blog::Application.routes.draw do
   match 'login' => 'sessions#new', as: :login
   match 'logout' => 'sessions#destroy', as: :logout
 
+  match 'search' => 'pages#search', as: :search
+
   match 'archives' => 'pages#archives', as: :archives
   match 'feed' => 'pages#index', as: :feed
   match ':slug' => 'pages#show', as: :page
