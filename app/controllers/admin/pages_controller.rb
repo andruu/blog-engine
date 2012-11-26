@@ -1,5 +1,7 @@
 class Admin::PagesController < ApplicationController
 
+  before_filter :authorize
+
   layout 'admin'
 
   # GET /admin/pages

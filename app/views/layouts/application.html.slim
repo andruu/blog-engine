@@ -21,13 +21,22 @@ html lang="en"
             span.andru andru
             span.co .co
         ul
+
           li = link_to 'about', '/about'
           li = link_to 'archives', '/archives'
           li = link_to 'work', '/work'
           li = link_to 'rss', '/feed.atom'
+          - if current_user
+            li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
+            li = link_to 'admin', '/admin'
+            li = link_to 'logout', '/logout'
 
     .container
       .main
+        - if notice
+          p.notice = notice
+        - if alert
+          p.alert = alert
         = yield
       .side-bar
         .side

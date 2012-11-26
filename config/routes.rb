@@ -1,6 +1,10 @@
 Blog::Application.routes.draw do
 
+  resources :sessions
   resources :comments, only: [:create]
+  
+  # Only need to create first user
+  # resources :users
 
   root :to => 'pages#index'
   
@@ -8,6 +12,9 @@ Blog::Application.routes.draw do
     root to: "pages#index"
     resources :pages
   end
+
+  match 'login' => 'sessions#new', as: :login
+  match 'logout' => 'sessions#destroy', as: :logout
 
   match 'archives' => 'pages#archives', as: :archives
   match 'feed' => 'pages#index', as: :feed

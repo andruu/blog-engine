@@ -1,0 +1,14 @@
+.post
+  h1.title Register
+  = simple_form_for @user do |f|
+    - if @user.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+        ul
+          - @user.errors.full_messages.each do |message|
+            li = message
+          
+    = f.input :email
+    = f.input :password
+    = f.input :password_confirmation
+    = f.submit 'Register', class: 'btn'

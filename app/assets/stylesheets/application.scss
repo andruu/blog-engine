@@ -93,6 +93,11 @@ a:hover {
     li {
       display:inline;
       margin-left:0px;
+      img {
+        margin:0 10px;
+        margin-bottom: -7px;
+        @include border-radius(2px);
+      }
       a {
         color:white;
         @include border-radius(20px);
@@ -297,7 +302,7 @@ pre {
 .breaker {
   @include clearfix;
 }
-label.string {
+label.string, label.email, label.password {
   display:block;
   margin-bottom:4px;
 }
@@ -313,7 +318,7 @@ label.collection_radio_buttons {
 }
 .input {
   margin-bottom:10px;
-  input[type='text'], textarea {
+  input[type='text'], input[type='email'], input[type='password'], textarea {
     font-size:16px;
     outline: none;
     width:400px;
@@ -322,6 +327,11 @@ label.collection_radio_buttons {
     padding:10px;
     padding-top:13px;
     @include box-shadow(inset 1px 1px 3px rgba(0,0,0,0.2));
+  }
+  .error {
+    display:block;
+    color:darkred;
+    margin-top:5px;
   }
 }
 
