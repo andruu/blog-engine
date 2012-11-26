@@ -34,9 +34,13 @@ html lang="en"
     .container
       .main
         - if notice
-          p.notice = notice
+          p.notice
+            | <a href="#" class="close-btn">×</a>
+            = notice
         - if alert
-          p.alert = alert
+          p.alert
+            | <a href="#" class="close-btn">×</a>
+            = alert
         = yield
       .side-bar
         .side

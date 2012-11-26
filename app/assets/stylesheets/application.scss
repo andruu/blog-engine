@@ -552,3 +552,21 @@ blockquote cite {
 blockquote cite:before {
   content: "\2014 \2009";
 }
+
+.notice, .alert {
+  padding:10px 20px;
+  padding-top:13px;
+  margin-bottom:0px;
+  @include border-radius(5px);
+  position:relative; 
+}
+
+.notice {
+  background-color:#ecffe0;
+  border:1px solid #d0f1bc;
+}
+
+.alert {
+  background-color:#ffe0e0;
+  border:1px solid #f1bcbc;
+}
