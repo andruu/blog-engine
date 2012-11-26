@@ -3,7 +3,9 @@
 - else
   - name = link_to comment.name, comment.url
 
-.comment
+.comment data-id="#{comment.id}"
+  - if current_user
+    .delete = link_to 'delete', comment_path(comment), remote: true, :confirm => 'Are you sure?', :method => :delete, :'data-delete-comment' => true
   .gravatar = gravatar_image_tag comment.email, gravatar: { size: 36 }
   .about <strong>#{name}</strong> &middot; #{time_ago_in_words comment.created_at}
   .body = markdown html_escape(comment.comment)

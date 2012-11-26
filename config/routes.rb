@@ -1,7 +1,7 @@
 Blog::Application.routes.draw do
 
   resources :sessions
-  resources :comments, only: [:create]
+  resources :comments, only: [:create, :destroy]
   
   # Only need to create first user
   # resources :users

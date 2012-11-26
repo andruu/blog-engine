@@ -431,12 +431,24 @@ table {
 }
 
 .comment {
+
   margin-bottom:20px;
   border-bottom:1px solid #eee;
   // padding-bottom:20px;
   position:relative;
+  .delete {
+    position:absolute;
+    right:10px;
+    a {
+      color:darkred;
+    }
+  }
   .gravatar {
+    width:36px;
+    height:36px;
     img {
+      width:36px;
+      height:36px;
       @include border-radius(3px);
     }
     display:inline-block;
