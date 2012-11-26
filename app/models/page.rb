@@ -13,7 +13,7 @@ class Page < ActiveRecord::Base
 
   def self.text_search(query)
     if query.present?
-      search(title: query, body: query)
+      search(body: query)
     else
       scoped
     end
