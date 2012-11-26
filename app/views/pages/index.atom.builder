@@ -5,7 +5,7 @@ atom_feed do |feed|
   @pages.each do |post|
     feed.entry(post, url: page_url(post.slug)) do |entry|
       entry.title(post.title)
-      entry.content(post.body, :type => 'html')
+      entry.content(markdown(post.body), :type => 'html')
 
       entry.author do |author|
         author.name("Andrew Weir")
