@@ -1,4 +1,4 @@
 <% if current_user %>
-$('.delete').show();
-$('.main-nav').append('<%= j render("layouts/dynamic_header") %>');
+window.cachedHeader = '<%= j render("layouts/dynamic_header") %>';
+$('.main-nav').append(window.cachedHeader);
 <% end %>

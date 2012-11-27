@@ -1,7 +1,17 @@
+window.cachedHeader = ''
+
 jQuery ->
   
   if $.cookie('logged_in') == 'true'
-    $.getScript('/users/current')
+
+    # Check if the header has already been fetched from the server
+    if window.cachedHeader != ''
+      $('.main-nav').append(window.cachedHeader)
+    else
+      $.getScript('/users/current')
+      
+    # Show delete button for comments
+    $('.delete').show()
     
   if $('.comments').length  
     $('#comment_name').val($.cookie('comment_name'))
