@@ -20,7 +20,7 @@ html lang="en"
           a href="/admin"
             span.andru andru
             span.co .co
-            span.admin &nbsp;admin
+            / span.admin &nbsp;admin
         ul
           li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
           li = link_to 'home', root_path
