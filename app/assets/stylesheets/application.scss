@@ -490,7 +490,11 @@ table {
     position:absolute;
     right:10px;
     a {
-      color:darkred;
+      // color:darkred;
+      @include button(simple, darkred);
+      padding:4px 10px;
+      padding-top:5px;
+      font-size:12px;
     }
   }
   .gravatar {
