@@ -1,6 +1,13 @@
 window.cachedHeader = ''
+window.cachedRecentPosts = ''
 
 jQuery ->
+
+  # Load recent posts
+  if window.cachedRecentPosts != ''
+    $('ul.recent-posts').append(window.cachedRecentPosts)
+  else
+    $.getScript('/pages/recent_posts')
   
   if $.cookie('logged_in') == 'true'
 

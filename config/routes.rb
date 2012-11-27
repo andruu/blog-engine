@@ -1,8 +1,10 @@
 Blog::Application.routes.draw do
 
+  match 'pages/recent_posts' => 'pages#recent_posts'
   match 'pages/:page' => 'pages#index'
 
   resources :pages
+
   resources :sessions
   resources :comments, only: [:create, :destroy]
   
@@ -25,7 +27,6 @@ Blog::Application.routes.draw do
   match 'archives' => 'pages#archives', as: :archives
   match 'feed' => 'pages#index', as: :feed
   match ':slug' => 'pages#show', as: :page
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
