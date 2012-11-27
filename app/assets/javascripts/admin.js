@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require main
 //= require epiceditor
 //= require jquery.slugify
 //= require css_browser_selector

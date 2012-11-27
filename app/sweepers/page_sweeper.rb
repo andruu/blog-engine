@@ -5,6 +5,7 @@ class PageSweeper < ActionController::Caching::Sweeper
     expire_page pages_path
     expire_page page_path(page.slug)
     expire_page '/'
+    expire_page archives_path
     FileUtils.rm_rf "#{page_cache_directory}/pages"
   end
 

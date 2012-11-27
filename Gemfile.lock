@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/lulalala/unobtrusive_flash.git
+  revision: 71a031ffa8271eb9d8d0f1b815a2beba738119f7
+  specs:
+    unobtrusive_flash (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -159,4 +165,5 @@ DEPENDENCIES
   thin
   turbolinks
   uglifier (>= 1.0.3)
+  unobtrusive_flash!
   will_paginate (~> 3.0.0)
