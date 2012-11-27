@@ -1,7 +1,12 @@
 jQuery ->
-
-  # console.log $('#comments h3').text().split(' ')[0]
-  # console.log $('.comment-count .count').text()
+  
+  if $.cookie('logged_in') == 'true'
+    $.getScript('/users/current')
+    
+  if $('.comments').length  
+    $('#comment_name').val($.cookie('comment_name'))
+    $('#comment_email').val($.cookie('comment_email'))
+    $('#comment_url').val($.cookie('comment_url'))
 
   $('.close-btn').on 'click', ->
     $(this).parent().hide()
@@ -42,3 +47,4 @@ jQuery ->
     else
       $('.side').removeClass 'fixed'
       $('.top-btn').removeClass 'show'
+  

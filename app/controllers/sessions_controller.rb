@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
+      cookies[:logged_in] = true
       redirect_to root_url, notice: 'Logged in.'
     else
       flash.now.alert = "Email or password is incorrect."
@@ -16,6 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    cookies[:logged_in] = false
     redirect_to root_url, notice: 'Logged out.'
   end
 end

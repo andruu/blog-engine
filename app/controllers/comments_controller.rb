@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  cache_sweeper :page_sweeper
+
   before_filter :authorize, only: [:destroy]
 
   def create
@@ -11,6 +13,8 @@ class CommentsController < ApplicationController
       cookies[:comment_url] = params[:comment][:url]
     end
 
+    PageSweeper.instance.sweep(page)
+
     @comment = page.comments.create params[:comment]
     render partial: 'comment', locals: { comment: @comment }
   end
@@ -18,6 +22,9 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @id = params[:id]
+
+    PageSweeper.instance.sweep(@comment.page)
+
     @comment.destroy
   end
 end

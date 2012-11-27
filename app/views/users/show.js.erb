@@ -1,0 +1,4 @@
+<% if current_user %>
+$('.delete').show();
+$('.main-nav').append('<%= j render("layouts/dynamic_header") %>');
+<% end %>

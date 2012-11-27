@@ -16,6 +16,7 @@
 //= require jquery.turbolinks
 //= require main
 //= require css_browser_selector
+//= require jquery.cookie
 //= require google-analytics-turbolinks
 
 $(document).ready(function () {

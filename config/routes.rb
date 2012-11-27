@@ -1,9 +1,13 @@
 Blog::Application.routes.draw do
 
+  match 'pages/:page' => 'pages#index'
+
+  resources :pages
   resources :sessions
   resources :comments, only: [:create, :destroy]
   
   # Only need to create first user
+  resources :users, only: [:show]
   # resources :users
 
   root :to => 'pages#index'

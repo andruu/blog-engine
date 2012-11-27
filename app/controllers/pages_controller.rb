@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  # caches_page :index, :show, :archives
+
   def index
     @pages = Page.published_posts.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|

@@ -25,27 +25,15 @@ html lang="en"
           form method="get" action="#{search_path}"
             input name="query" type="search" placeholder="search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'search...'" value="#{params[:query]}"
 
-        ul
+        ul.main-nav
 
           li = link_to 'about', '/about'
           li = link_to 'archives', '/archives'
           li = link_to 'work', '/work'
           li = link_to 'rss', 'http://feeds.feedburner.com/Andruco'
-          - if current_user
-            li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
-            li = link_to 'admin', '/admin'
-            li = link_to 'logout', '/logout'
 
     .container
       .main
-        - if notice
-          p.notice
-            | <a href="#" class="close-btn">×</a>
-            = notice
-        - if alert
-          p.alert
-            | <a href="#" class="close-btn">×</a>
-            = alert
         = yield
       .side-bar
         .side
