@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  after_filter :prepare_unobtrusive_flash
+  
   def new
     @user = User.new
   end

@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  after_filter :prepare_unobtrusive_flash
+  
   def new
     redirect_to root_url if current_user
   end

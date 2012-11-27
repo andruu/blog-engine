@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  after_filter :prepare_unobtrusive_flash
   cache_sweeper :page_sweeper
 
   before_filter :authorize, only: [:destroy]
