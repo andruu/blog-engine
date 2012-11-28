@@ -6,8 +6,11 @@ module Blog
 
   # Caching
   def self.cache
+
+    # Options :page or :action (you can return anything else for no caching)
+
     if Blog.env == 'development'
-      return :action
+      return :page
     elsif Blog.env == 'production'
       return :action
     end
@@ -37,6 +40,11 @@ module Blog
   # 3rd Party
   GOOGLE_ANALYTICS = 'UA-36592122-1'
   RSS              = 'http://feeds.feedburner.com/Andruco'
+
+  # Memcache Settings
+  MEMCACHE_SERVERS  = ENV['MEMCACHE_SERVERS']
+  MEMCACHE_USERNAME = ENV['MEMCACHE_USERNAME']
+  MEMCACHE_PASSWORD = ENV['MEMCACHE_PASSWORD']
 
   # SMTP Settings
   SMTP_PORT           = ENV['MAILGUN_SMTP_PORT']
