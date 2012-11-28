@@ -1,0 +1,4 @@
+New comment from <%= "#{@comment.email}, #{@comment.name}" %> posted on <%= @comment.page.title %>
+Comment
+<%= @comment.comment %>
+View comment <%= page_path(@comment.page.slug) %>

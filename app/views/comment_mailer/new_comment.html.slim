@@ -1,0 +1,4 @@
+p New comment from <a href="mailto:#{@comment.email}">#{@comment.name}</a> posted on <strong>#{@comment.page.title}</strong>
+h4 Comment
+p = @comment.comment
+p = link_to 'View comment', page_url(@comment.page.slug)

@@ -13,9 +13,14 @@ class CommentsController < ApplicationController
       cookies[:comment_url] = params[:comment][:url]
     end
 
+    # Clear cache
     PageSweeper.instance.sweep(page)
 
     @comment = page.comments.create params[:comment]
+    
+    # Send email
+    CommentMailer.new_comment(@comment).deliver
+
     render partial: 'comment', locals: { comment: @comment }
   end
 

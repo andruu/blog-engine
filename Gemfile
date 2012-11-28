@@ -35,6 +35,7 @@ gem 'gravatar_image_tag'
 gem 'thin'
 gem 'texticle', "2.0", :require => 'texticle/rails'
 gem 'unobtrusive_flash', :git => 'git://github.com/lulalala/unobtrusive_flash.git'
+gem "letter_opener", :group => :development
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
