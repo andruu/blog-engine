@@ -1,10 +1,26 @@
 module Blog
 
+  def self.env
+    defined?(Rails) ? Rails.env : ENV['RACK_ENV']
+  end
+
+  # Caching
+  def self.cache
+    if Blog.env == 'development'
+      return :action
+    elsif Blog.env == 'production'
+      return :action
+    end
+  end
+
   # Title of blog
   TITLE = 'andru.co'
 
   # Url of blog
   URL = 'andru.co'
+  
+  # Email for comments
+  EMAIL = 'andru.weir@gmail.com'
 
   # Sidebar
   NAME         = 'Andrew Weir'
@@ -14,9 +30,6 @@ module Blog
   LINKEDIN     = 'andruu'
   RECENT_POSTS = 3
 
-  # Email for comments
-  EMAIL            = 'andru.weir@gmail.com'
-  
   # Page settings
   POSTS_PER_PAGE   = 5
   POSTS_PER_SEARCH = 10

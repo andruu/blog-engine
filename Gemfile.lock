@@ -48,6 +48,7 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     daemons (1.1.9)
+    dalli (2.1.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
     execjs (1.4.0)
@@ -153,6 +154,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bourbon
   coffee-rails (~> 3.2.1)
+  dalli
   google-analytics-turbolinks
   gravatar_image_tag
   jquery-rails

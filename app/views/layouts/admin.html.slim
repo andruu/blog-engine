@@ -18,8 +18,7 @@ html lang="en"
       .container
         .logo
           a href="/admin"
-            span.andru andru
-            span.co .co
+            == title_for_header
         ul
           li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
           li = link_to 'home', root_path

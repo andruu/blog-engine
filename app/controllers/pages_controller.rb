@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
-  # caches_page :index, :show, :archives
+  caches_page :index, :show, :archives if Blog.cache == :page
+  caches_action :index, :show, :archives if Blog.cache == :action
 
   def index
     @pages = Page.published_posts.order('created_at DESC').paginate(:page => params[:page], :per_page => Blog::POSTS_PER_PAGE)
