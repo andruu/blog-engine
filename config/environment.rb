@@ -7,13 +7,13 @@ Blog::Application.initialize!
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true 
 ActionMailer::Base.raise_delivery_errors = true
-ActionMailer::Base.default_url_options = { host: "andru.co" }
+ActionMailer::Base.default_url_options = { host: Blog::URL }
 
 ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'], 
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'app9499505.mailgun.org',
-  :authentication => :plain,
+  :port           => Blog::SMTP_PORT, 
+  :address        => Blog::SMTP_ADDRESS,
+  :user_name      => Blog::SMTP_USER_NAME,
+  :password       => Blog::SMTP_PASSWORD,
+  :domain         => Blog::SMTP_DOMAIN,
+  :authentication => Blog::SMTP_AUTHENTICATION
 }

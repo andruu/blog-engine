@@ -114,10 +114,10 @@ a:hover {
       @include transition (all 0.2s ease);
       opacity: 0.8;
     }
-    .andru {
+    .tld {
       color:white;
     }
-    .co {
+    .suffix {
       color:lighten($main-color, 40%);
     }
     .admin {
@@ -128,9 +128,10 @@ a:hover {
     margin:0;
     padding:0;
     display:inline-block;
-    position:absolute;
-    left:110px;
-    top:9px;
+    position:relative;
+    // left:110px;
+    top:-4px;
+    margin-left:10px;
     li {
       display:inline;
       margin-left:0px;

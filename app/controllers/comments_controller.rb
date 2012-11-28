@@ -8,9 +8,9 @@ class CommentsController < ApplicationController
     page = Page.find(params[:comment][:page_id])
 
     if params[:remember_me]
-      cookies[:comment_name] = params[:comment][:name]
+      cookies[:comment_name]  = params[:comment][:name]
       cookies[:comment_email] = params[:comment][:email]
-      cookies[:comment_url] = params[:comment][:url]
+      cookies[:comment_url]   = params[:comment][:url]
     end
 
     # Clear cache

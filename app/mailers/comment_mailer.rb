@@ -1,8 +1,8 @@
 class CommentMailer < ActionMailer::Base
-  default from: "andru.weir@gmail.com"
+  default from: Blog::EMAIL
 
   def new_comment(comment)
     @comment = comment
-    mail to: "andru.weir@gmail.com", subject: "New comment on andru.co: #{comment.page.title}"
+    mail to: Blog::EMAIL, subject: "New comment on #{Blog::TITLE}: #{comment.page.title}"
   end
 end

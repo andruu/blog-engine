@@ -19,4 +19,12 @@ module ApplicationHelper
     }
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
+
+  def title_for_header
+    if Blog::TITLE.include? '.'
+      return "<span class='tld'>#{Blog::TITLE.split('.').first}</span><span class='suffix'>.#{Blog::TITLE.split('.').last}</span>"
+    else
+      return "<span class='tld'>#{Blog::TITLE}</span>"
+    end
+  end
 end
