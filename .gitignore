@@ -15,4 +15,5 @@
 /tmp
 /public
 
+.powenv
 *.DS_Store

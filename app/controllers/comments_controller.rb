@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
     @comment = page.comments.create params[:comment]
     
     # Send email
-    # CommentMailer.new_comment(@comment).deliver
+    CommentMailer.new_comment(@comment).deliver
 
     render partial: 'comment', locals: { comment: @comment }
   end
