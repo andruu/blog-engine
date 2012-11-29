@@ -18,8 +18,11 @@
 //= require css_browser_selector
 //= require jquery.cookie
 //= require google-analytics-turbolinks
+//= require jquery.placeholder
 
 $(document).ready(function () {
+
+  $('input, textarea').placeholder();
 
   // This requires jQuery at least for now
   function setupFlash () {
