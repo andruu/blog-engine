@@ -1,3 +1,3 @@
-li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
-li = link_to 'admin', '/admin'
-li = link_to 'logout', '/logout', 'data-no-turbolink' => true
+li.admin.grav = gravatar_image_tag current_user.email, gravatar: { size: 20 }
+li.admin = link_to 'admin', '/admin'
+li.admin = link_to 'logout', '/logout', 'data-no-turbolink' => true

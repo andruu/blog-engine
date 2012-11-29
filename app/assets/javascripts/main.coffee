@@ -20,6 +20,8 @@ jQuery ->
     # Show delete button for comments
     $('.delete').show()
     
+  $('ul.small').html($('ul.main-nav').html())
+  
   if $('.comments').length  
     $('#comment_name').val($.cookie('comment_name'))
     $('#comment_email').val($.cookie('comment_email'))
