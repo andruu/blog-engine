@@ -37,4 +37,9 @@ class PagesController < ApplicationController
     
   end
 
+  def clear_cache
+    Rails.cache.clear
+    render text: 'cache cleared'
+  end
+
 end

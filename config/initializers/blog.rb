@@ -23,6 +23,9 @@ module Blog
   # Email for comments
   EMAIL = 'andru.weir@gmail.com'
 
+  # Path to clear cache, used for deployment hook or to clear cache from the browser
+  CLEAR_CACHE_PATH = ENV['CLEAR_CACHE_PATH'] || 'clear/the/cache'
+
   # Sidebar
   NAME         = 'Andrew Weir'
   BLURB        = 'Web developer specializing in Ruby, Node.js and PHP.'

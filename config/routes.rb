@@ -1,5 +1,8 @@
 Blog::Application.routes.draw do
 
+  # Path to clear cache, used for deployment hook or to clear cache from the browser
+  match Blog::CLEAR_CACHE_PATH => 'pages#clear_cache'
+
   match 'pages/recent_posts' => 'pages#recent_posts'
   match 'pages/:page' => 'pages#index'
 

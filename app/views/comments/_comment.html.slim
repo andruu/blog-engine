@@ -6,5 +6,5 @@
 .comment data-id="#{comment.id}"
   .delete.admin = link_to 'delete', comment_path(comment), remote: true, :confirm => 'Are you sure?', :method => :delete, :'data-delete-comment' => true
   .gravatar = gravatar_image_tag comment.email, gravatar: { size: 36 }
-  .about <strong>#{name}</strong> &middot; #{time_ago_in_words comment.created_at}
+  .about <strong>#{name}</strong> &middot; #{comment.created_at.to_formatted_s(:proper_time)}
   .body = markdown html_escape(comment.comment)
