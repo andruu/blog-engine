@@ -647,7 +647,7 @@ ul.small {
 }
 
 .sm-top-btn {
-  display:inline-block;
+  display:none;
   position:absolute;
   bottom:-15px;
   right:0;
@@ -670,6 +670,7 @@ ul.small {
 
 // Media queries
 @media print, screen and (max-width: 900px) {
+
   .container {
     width:720px;
   }
@@ -748,6 +749,10 @@ ul.small {
   }
 }
 @media print, screen and (max-width: 720px) {
+
+  .sm-top-btn {
+    display:inline-block;
+  }
 
   .comments {
     h3.title {
