@@ -21,6 +21,7 @@ html lang="en"
         .logo
           a href="/"
             == title_for_header
+        i.iconf-lamp
         .search
           form method="get" action="#{search_path}"
             input name="query" type="search" placeholder="search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'search...'" value="#{params[:query]}"
@@ -31,6 +32,7 @@ html lang="en"
           li = link_to 'archives', '/archives'
           li = link_to 'work', '/work'
           li = link_to 'rss', Blog::RSS
+
 
     .container
       .main

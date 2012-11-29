@@ -21,6 +21,16 @@ jQuery ->
     $('.delete').show()
     
   $('ul.small').html($('ul.main-nav').html())
+
+  if $.cookie('dark_mode') is 'true'
+    $('body').addClass('dark')
+
+  $('i.iconf-lamp').on 'click', ->
+    if $('body').hasClass('dark')
+      $.cookie('dark_mode', 'false')
+    else
+      $.cookie('dark_mode', 'true')
+    $('body').toggleClass('dark')
   
   if $('.comments').length  
     $('#comment_name').val($.cookie('comment_name'))

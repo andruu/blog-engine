@@ -2,6 +2,7 @@
 @import url(http://fast.fonts.com/cssapi/3e508b19-8020-452f-be85-9dc0c7b1ab81.css);
 @import 'normalize-rails';
 @import 'font-awesome';
+@import 'fontello';
 @import 'bourbon';
 @import 'pygments';
 
@@ -21,6 +22,99 @@ body {
   // background-color: black;
   // color:white;
   // text-shadow:1px 1px 1px black;
+}
+body.dark {
+  a {
+    color:lighten($main-color, 20%);
+  }
+  background-color:#111;
+  text-shadow:none;
+  color:#ddd;
+  .main {
+    border-right:1px solid #222;
+  }
+  .post .date {
+    color:#666;
+    border-bottom:1px solid #222;
+  }
+  .post .title a {
+    color:lighten($main-color, 20%);
+  }
+  .post .comment-count {
+    color:#666;
+    a {
+      color:#666;
+    }
+  }
+  .side-bar .recent, .archives {
+    border-bottom:1px solid #222;
+    color:#666;
+  }
+  .highlight {
+    background-color: #111;
+  }
+  pre {
+    background-color:#000;
+    border:1px solid #222;
+  }
+  code {
+    background-color:#333;
+  }
+  .comments h3.title, .comment {
+    border-color:#222;
+  }
+  .top-stripe {
+    background-color:black;
+  }
+  .header {
+    background-color:#333;
+    border-bottom:1px solid black;
+    @include box-shadow(1px 1px 3px rgba(0,0,0,0.4));
+    a {
+      text-shadow: 1px 1px 2px black;
+    }
+    ul li a {
+      text-shadow: 1px 1px 2px black;
+      color:#999;
+      &:hover {
+        background-color:#222;
+        @include box-shadow(inset 1px 1px 1px black, 1px 1px 1px #444);
+      }
+    }
+    i.iconf-lamp {
+      text-shadow: 1px 1px 2px black;
+      color:#999;
+    }
+    .search {
+      input {
+        color:#999;
+        text-shadow: 1px 1px 2px black;
+        background-color:#222;
+        border:1px solid #111;
+        @include transition (none);
+      }
+      ::-webkit-input-placeholder {
+         color: #666;
+         text-shadow:none;
+      }
+      :-moz-placeholder {
+         color: #666;
+         text-shadow:none;
+      }
+    }
+  }
+  .comment-form {
+    background-color:transparent;
+    border:none;
+  }
+  ul.small li a {
+    @include linear-gradient(#333, #222);
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 1px solid black
+  }
+  blockquote {
+    color:#aaa;
+  }
 }
 
 strong {
@@ -65,7 +159,7 @@ a:hover {
   .search {
     display:inline-block;
     position:absolute;
-    right:0;
+    right:30px;
     top:8px;
     input {
       display:inline-block;
@@ -124,13 +218,23 @@ a:hover {
       color:white;
     }
   }
+  i.iconf-lamp {
+    cursor:pointer;
+    
+    color:white;
+    text-shadow: 1px 1px 2px darken($main-color, 10%);
+    position:absolute;
+    right:0px;
+    top:9px;
+  }
   ul {
     margin:0;
     padding:0;
     display:inline-block;
-    position:relative;
-    // left:110px;
-    top:-4px;
+    position:absolute;
+    left:96px;
+    // right:0px;
+    top:9px;
     margin-left:10px;
     li {
       display:inline;
@@ -749,7 +853,9 @@ ul.small {
   }
 }
 @media print, screen and (max-width: 720px) {
-
+  body.dark .main {
+    border-right: none;
+  }
   .sm-top-btn {
     display:inline-block;
   }

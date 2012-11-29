@@ -40,5 +40,5 @@ Blog::Application.configure do
   config.assets.debug = true
 
   # Set up cache store
-  config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS'], { username: ENV['MEMCACHE_USERNAME'], password: ENV['MEMCACHE_PASSWORD'] }
+  # config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS'], { username: ENV['MEMCACHE_USERNAME'], password: ENV['MEMCACHE_PASSWORD'] }
 end
