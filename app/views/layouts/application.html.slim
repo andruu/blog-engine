@@ -29,8 +29,8 @@ html lang="en"
         ul.main-nav
 
           li = link_to 'about', '/about'
-          li = link_to 'archives', '/archives'
           li = link_to 'work', '/work'
+          li = link_to 'archives', '/archives'
           li = link_to 'rss', Blog::RSS
 
 
@@ -43,7 +43,7 @@ html lang="en"
           .top-btn <i class="icon-caret-up"></i>
           h4.name = Blog::NAME
           p.about = Blog::BLURB
-          
+          p.location <i class="icon-map-marker"></i> #{Blog::LOCATION}
           ul.links
             li
               a href="http://www.github.com/#{Blog::GITHUB}" <i class="icon-github"></i> GitHub

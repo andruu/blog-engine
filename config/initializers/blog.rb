@@ -32,6 +32,7 @@ module Blog
   GITHUB       = 'andruu'
   TWITTER      = 'andruu'
   LINKEDIN     = 'andruu'
+  LOCATION     = 'Toronto, Canada'
   RECENT_POSTS = 3
 
   # Page settings
