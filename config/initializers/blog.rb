@@ -8,7 +8,7 @@ module Blog
   def self.cache
     # Options :page or :action (you can return anything else for no caching)
     if Blog.env == 'development'
-      return :page
+      return :none
     elsif Blog.env == 'production'
       return :action
     end
