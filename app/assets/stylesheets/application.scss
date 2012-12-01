@@ -68,6 +68,7 @@ body.dark {
   }
   .header {
     background-color:#333;
+    @include linear-gradient(#333, #222);
     border-bottom:1px solid black;
     @include box-shadow(1px 1px 3px rgba(0,0,0,0.4));
     a {
@@ -144,12 +145,15 @@ a:hover {
 .top-stripe {
   height:3px;
   background-color:$sub-color;
+  display:none;
 }
 .header {
   z-index:1000;
   padding-top:0px;
-  padding-bottom:3px;
+  // padding-bottom:3px;
+  height:37px;
   background-color:$main-color;
+  @include linear-gradient($main-color, $sub-color);
   position:relative;
   border-bottom:1px solid lighten($main-color, 30%);
   @include box-shadow(1px 1px 3px rgba(0,0,0,0.3));
@@ -160,13 +164,13 @@ a:hover {
     display:inline-block;
     position:absolute;
     right:30px;
-    top:8px;
+    top:9px;
     input {
       display:inline-block;
       font-size:12px;
       outline: none;
       width:100px;
-      border:1px solid darken($main-color, 12%);
+      border:1px solid darken($main-color, 14%);
       background-color:darken($main-color, 5%);
       @include border-radius(20px);
       padding:2px 10px;
@@ -196,7 +200,11 @@ a:hover {
     }
   }
   .logo {
-    display:inline-block;
+    position:absolute;
+    left:0;
+    top:-2px;
+    // margin-bottom:-2px;
+    // display:inline-block;
   }
   .logo a {
     font-size:24px;
@@ -225,7 +233,7 @@ a:hover {
     text-shadow: 1px 1px 2px darken($main-color, 10%);
     position:absolute;
     right:0px;
-    top:9px;
+    top:10px;
   }
   ul {
     margin:0;
@@ -234,7 +242,7 @@ a:hover {
     position:absolute;
     left:96px;
     // right:0px;
-    top:9px;
+    top:8px;
     margin-left:10px;
     li {
       display:inline;
@@ -252,8 +260,8 @@ a:hover {
         padding:4px 12px;
         padding-top:5px;
         &:hover {
-          background-color:darken($main-color, 10%);
-          @include box-shadow(inset 1px 1px 1px darken($main-color, 20%), 1px 1px 1px lighten($main-color, 10%));
+          background-color:darken($main-color, 15%);
+          @include box-shadow(inset 1px 1px 1px darken($main-color, 20%), 1px 1px 1px lighten($main-color, 5%));
         }
       }
     }
@@ -758,9 +766,9 @@ ul.small {
 
 .sm-top-btn {
   display:none;
-  // position:absolute;
-  // bottom:-15px;
-  // right:0;
+  position:absolute;
+  bottom:-15px;
+  right:0;
   cursor:pointer;
   z-index: 1;
   background-color:$sub-color;
@@ -769,6 +777,7 @@ ul.small {
   padding-top:5px;
   color:white;
   font-size:14px;
+  cursor:pointer;
   @include transition (all 0.6s ease);
   @include border-top-radius(5px);
   &:hover {
@@ -896,11 +905,13 @@ ul.small {
   }
 
   .top-stripe {
-    margin:-15px;
-    margin-bottom:0;
+
+    // margin:-15px;
+    // margin-bottom:0;
   }
   .header {
     margin:0 -15px;
+    margin-top:-15px;
     margin-bottom:0;
     padding: 0 15px;
     .search {

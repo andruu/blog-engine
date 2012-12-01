@@ -70,7 +70,7 @@ jQuery ->
     , 200
 
   $(window).scroll (e) ->
-    if $(window).scrollTop() > 40
+    if $(window).scrollTop() > 37
       $('.side').addClass 'fixed'
       $('.top-btn').addClass 'show'
     else
