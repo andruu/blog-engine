@@ -14,6 +14,8 @@ class PagesController < ApplicationController
   def show
     @page = Page.published.find_by_slug(params[:slug])
     return redirect_to root_path unless @page
+    @previous_page = @page.previous
+    @next_page = @page.next
     @comment = Comment.new
   end
 

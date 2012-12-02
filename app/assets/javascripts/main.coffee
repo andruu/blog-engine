@@ -22,6 +22,12 @@ jQuery ->
     
   $('ul.small').html($('ul.main-nav').html())
 
+  $('.next').hover ->
+    $('.next-preview').toggleClass('show')
+
+  $('.prev').hover ->
+    $('.prev-preview').toggleClass('show')
+
   if $.cookie('dark_mode') is 'true'
     $('body').addClass('dark')
 

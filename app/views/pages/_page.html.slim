@@ -1,3 +1,17 @@
+- if params[:action] == 'show' && page.page_type == 'post'
+  - if @previous_page
+    .prev-preview
+      strong = @previous_page.title
+      p == strip_tags(markdown(@previous_page.body)).truncate(100)
+    .prev
+      = link_to 'Previous', page_path(@previous_page.slug)
+  -if @next_page
+    .next-preview
+      strong = @next_page.title
+      p == strip_tags(markdown(@next_page.body)).truncate(100)
+    .next 
+      = link_to 'Next', page_path(@next_page.slug)
+
 .post
   - if page.page_type == 'post'
     .comment-count

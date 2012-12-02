@@ -19,4 +19,12 @@ class Page < ActiveRecord::Base
     end
   end
 
+  def previous
+    Page.published_posts.where("id < ?", id).last
+  end
+
+  def next
+    Page.published_posts.where("id > ?", id).first
+  end
+
 end
