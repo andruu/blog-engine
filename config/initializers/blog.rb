@@ -28,7 +28,7 @@ module Blog
 
   # Sidebar
   NAME         = 'Andrew Weir'
-  BLURB        = 'Entrepreneur & web developer specializing in Ruby, Node.js and PHP.'
+  BLURB        = 'Entrepreneur & web developer specializing in Ruby on Rails, Node.js and PHP.'
   GITHUB       = 'andruu'
   TWITTER      = 'andruu'
   LINKEDIN     = 'andruu'

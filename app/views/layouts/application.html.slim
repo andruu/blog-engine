@@ -42,8 +42,9 @@ html lang="en"
         .side
           .top-btn <i class="icon-caret-up"></i>
           h4.name = Blog::NAME
-          p.about = Blog::BLURB
           p.location <i class="icon-map-marker"></i> #{Blog::LOCATION}
+          = gravatar_image_tag Blog::EMAIL, gravatar: { size: 60 }
+          p.about = Blog::BLURB
           ul.links
             li
               a href="http://www.github.com/#{Blog::GITHUB}" <i class="icon-github"></i> GitHub

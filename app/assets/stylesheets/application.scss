@@ -356,12 +356,22 @@ a:hover {
     font-size:18px;
     margin:0;
     margin-top:30px;
+    margin-bottom: -4px;
   }
   .location {
     color:#bbb;
     font-size:12px;
     margin:0;
-    margin-top:4px;
+    margin-top:0px;
+    margin-bottom:10px;
+  }
+  img {
+    float:left;
+    @include border-radius(1000px);
+    // @include box-shadow(1px 1px 5px rgba(0,0,0,.5));
+    margin-right:10px;
+    margin-bottom:10px;
+    margin-top:10px;
   }
   .about {
     color:#bbb;
