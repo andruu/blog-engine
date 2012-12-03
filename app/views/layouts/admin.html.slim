@@ -12,7 +12,7 @@ html lang="en"
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", :media => "all"
 
-  body
+  body.admin
     .top-stripe
     .header
       .container
@@ -20,6 +20,11 @@ html lang="en"
           a href="/admin"
             == title_for_header
         ul
+          li = link_to 'posts', '/admin/posts'
+          li = link_to 'pages', '/admin/pages'
+          li = link_to 'comments', admin_comments_path
+          li = link_to 'menu', admin_menus_path
+          li = link_to 'settings'
           li = gravatar_image_tag current_user.email, gravatar: { size: 20 }
           li = link_to 'home', root_path
           li = link_to 'logout', '/logout'

@@ -1,0 +1,17 @@
+h1 Listing admin_menus
+
+table
+  tr
+    th
+    th
+    th
+
+  - @admin_menus.each do |admin_menu|
+    tr
+      td = link_to 'Show', admin_menu
+      td = link_to 'Edit', edit_admin_menu_path(admin_menu)
+      td = link_to 'Destroy', admin_menu, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Menu', new_admin_menu_path

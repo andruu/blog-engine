@@ -26,4 +26,4 @@
   .body
     = markdown page.body
 
-  = render(partial: 'tweet', locals: { page: page }) if params[:action] == 'show' && page.page_type == 'post'
+  = render(partial: 'pages/tweet', locals: { page: page }) if params[:action] == 'show' && page.page_type == 'post'

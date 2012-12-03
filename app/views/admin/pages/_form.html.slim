@@ -8,9 +8,12 @@
 
   = f.input :title, input_html: { class: 'title' }
   = f.input :slug, input_html: { class: 'slug' }
-  = f.input :page_type, label: 'Type', collection: %w(post page), as: :radio_buttons
-  = f.input :has_comments
+  = f.input :page_type, as: :hidden, input_html: { value: params[:type] || @page.try(:page_type) }
+  = f.input :has_comments if params[:type] == 'post' || @page.try(:page_type) == 'post'
   = f.input :is_published
   #epiceditor
   = f.input :body, label: false
-  .actions = f.submit 'Save Page', class: 'btn'
+  .actions 
+    = f.submit 'Save Page', class: 'btn'
+    | &nbsp;
+    = link_to 'Back', admin_pages_path

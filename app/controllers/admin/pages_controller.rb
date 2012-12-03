@@ -1,15 +1,11 @@
-class Admin::PagesController < ApplicationController
-
-  before_filter :authorize
-  cache_sweeper :page_sweeper
-
-  layout 'admin'
+class Admin::PagesController < Admin::AdminController
 
   # GET /admin/pages
   # GET /admin/pages.json
   def index
-    @pages = Page.order('updated_at DESC')
-
+    params[:type] = 'post' unless params[:type]
+    @pages = Page.order('updated_at DESC').where(page_type: params[:type])
+    @type = params[:type].capitalize
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pages }
@@ -50,7 +46,11 @@ class Admin::PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to admin_pages_url, notice: 'Page was successfully created.' }
+
+        url = admin_pages_url if @page.page_type == 'page'
+        url = admin_posts_url if @page.page_type == 'post'
+
+        format.html { redirect_to url, notice: 'Page was successfully created.' }
         format.json { render json: @page, status: :created, location: @page }
       else
         format.html { render action: "new" }
@@ -66,7 +66,11 @@ class Admin::PagesController < ApplicationController
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to admin_pages_url, notice: 'Page was successfully updated.' }
+
+        url = admin_pages_url if @page.page_type == 'page'
+        url = admin_posts_url if @page.page_type == 'post'
+
+        format.html { redirect_to url, notice: 'Page was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

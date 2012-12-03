@@ -19,7 +19,11 @@ Blog::Application.routes.draw do
   
   namespace :admin do
     root to: "pages#index"
+    match 'posts' => "pages#index", type: :post
+    get 'pages' => "pages#index", type: :page
     resources :pages
+    resources :comments
+    resources :menus
   end
 
   match 'login' => 'sessions#new', as: :login

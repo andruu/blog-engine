@@ -222,7 +222,7 @@ a:hover {
     font-size:24px;
     font-family: 'Bree Serif', serif;
     opacity: 1;
-    text-shadow: 1px 1px 2px darken($main-color, 10%);
+    text-shadow: 1px 1px 2px darken($main-color, 20%);
     @include transition (all 0.2s ease);
     &:hover {
       @include transition (all 0.2s ease);
@@ -242,7 +242,7 @@ a:hover {
     cursor:pointer;
     
     color:white;
-    text-shadow: 1px 1px 2px darken($main-color, 10%);
+    text-shadow: 1px 1px 2px darken($main-color, 20%);
     position:absolute;
     right:0px;
     top:10px;
@@ -268,7 +268,7 @@ a:hover {
         color:white;
         @include border-radius(20px);
         // font-weight:bold;
-        text-shadow: 1px 1px 2px darken($main-color, 10%);
+        text-shadow: 1px 1px 2px darken($main-color, 20%);
         padding:4px 12px;
         padding-top:5px;
         &:hover {
@@ -287,7 +287,9 @@ a:hover {
   // margin-top:-2px;
 }
 
-
+.admin .header .logo a {
+  @include transition (none);
+}
 
 .main {
   padding-bottom:100px;
@@ -493,7 +495,7 @@ pre {
 .breaker {
   @include clearfix;
 }
-label.string, label.email, label.password {
+label.string, label.email, label.password, label.text, label.url {
   display:block;
   margin-bottom:4px;
 }
@@ -509,7 +511,7 @@ label.collection_radio_buttons {
 }
 .input {
   margin-bottom:10px;
-  input[type='text'], input[type='email'], input[type='password'], textarea {
+  input[type='text'], input[type='email'], input[type='url'], input[type='password'], textarea {
     font-size:16px;
     outline: none;
     width:400px;
@@ -518,6 +520,10 @@ label.collection_radio_buttons {
     padding:10px;
     padding-top:13px;
     @include box-shadow(inset 1px 1px 3px rgba(0,0,0,0.2));
+  }
+  textarea {
+    height:100px;
+    width:600px;
   }
   .error {
     display:block;
@@ -534,7 +540,44 @@ table {
     border-bottom:1px solid #ccc;
   }
   th, td {
+    font-size:13px;
     padding:10px;
+    padding-top:13px;
+    &.vatop {
+      vertical-align:top;    
+    }
+    p {
+      margin-top:0;
+      padding-top:0;
+    }
+  }
+  tr:nth-child(2n+1) {
+    background-color: #fafafa;
+  }
+  .actions {
+    text-align: center;
+  }
+  td.title {
+    width:500px;
+    font-size:15px;
+  }
+  td.actions {
+    padding-left:4px;
+    padding-right:4px;
+    width:20px;
+    font-size:24px;
+    &.edit a {
+      @include button(simple, $main-color);
+      padding:4px 10px;
+      padding-top:5px;
+      font-size:12px;
+    }
+    &.delete a {
+      @include button(simple, darkred);
+      padding:4px 10px;
+      padding-top:5px;
+      font-size:12px;
+    }
   }
 }
 
@@ -1077,6 +1120,9 @@ ul.small {
   // }
 }
 
+.admin {
+  padding-bottom:100px;
+}
 
 
 

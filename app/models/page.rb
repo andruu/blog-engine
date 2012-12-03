@@ -5,6 +5,7 @@ class Page < ActiveRecord::Base
 
   scope :published, where(is_published: true)
   scope :posts, where(page_type: 'post')
+  scope :pages, where(page_type: 'page')
   scope :published_posts, published.posts
 
   validates :title, presence: true, length: { in: 3..255 }

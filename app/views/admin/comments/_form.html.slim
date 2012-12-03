@@ -1,0 +1,15 @@
+= simple_form_for [:admin, @comment] do |f|
+  - if @comment.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@comment.errors.count, "error")} prohibited this admin_comment from being saved:"
+      ul
+        - @comment.errors.full_messages.each do |message|
+          li = message
+  = f.input :name
+  = f.input :email
+  = f.input :url
+  = f.input :comment
+  .actions
+    = f.submit 'Save Comment', class: 'btn'
+    | &nbsp;
+    = link_to 'Back', admin_comments_path
