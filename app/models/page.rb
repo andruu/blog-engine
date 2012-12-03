@@ -20,11 +20,11 @@ class Page < ActiveRecord::Base
   end
 
   def previous
-    Page.published_posts.where("id < ?", id).last
+    Page.published_posts.where("id < ?", id).order('id ASC').last
   end
 
   def next
-    Page.published_posts.where("id > ?", id).first
+    Page.published_posts.where("id > ?", id).order('id DESC').first
   end
 
 end

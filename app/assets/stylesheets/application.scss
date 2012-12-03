@@ -831,7 +831,6 @@ ul.small {
 }
 
 .prev {
-
   @include transform(rotate(270deg));
   left:-28px;
   a {
