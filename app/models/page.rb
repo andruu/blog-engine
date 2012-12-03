@@ -24,7 +24,7 @@ class Page < ActiveRecord::Base
   end
 
   def next
-    Page.published_posts.where("id > ?", id).order('id DESC').first
+    Page.published_posts.where("id > ?", id).order('id ASC').first
   end
 
 end
