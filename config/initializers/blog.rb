@@ -26,9 +26,6 @@ module Blog
   # Path to clear cache, used for deployment hook or to clear cache from the browser
   CLEAR_CACHE_PATH = ENV['CLEAR_CACHE_PATH'] || 'clear/the/cache'
 
-  # CDN URL
-  CDN_URL = "http://d2khsq8thzom18.cloudfront.net"
-
   # Sidebar
   NAME         = 'Andrew Weir'
   BLURB        = 'Entrepreneur & web developer specializing in Ruby on Rails, Node.js and PHP.'

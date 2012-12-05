@@ -43,7 +43,7 @@ Blog::Application.configure do
   config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS'], { username: ENV['MEMCACHE_USERNAME'], password: ENV['MEMCACHE_PASSWORD'] }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = Blog::CDN_URL
+  config.action_controller.asset_host = "http://d2khsq8thzom18.cloudfront.net"
   config.static_cache_control = "public, max-age=31536000"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
