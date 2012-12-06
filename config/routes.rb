@@ -7,6 +7,8 @@ Blog::Application.routes.draw do
   match 'pages/:page' => 'pages#index'
 
   resources :pages
+  resources :contact, only: [:create]
+  match 'contact' => 'contact#new'
 
   resources :sessions
   resources :comments, only: [:create, :destroy]

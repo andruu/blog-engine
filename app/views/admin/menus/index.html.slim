@@ -1,4 +1,4 @@
-h1 Listing admin_menus
+h1 Listing Menu Items
 
 table
   tr
@@ -6,11 +6,11 @@ table
     th
     th
 
-  - @admin_menus.each do |admin_menu|
+  - @menus.each do |menu|
     tr
-      td = link_to 'Show', admin_menu
-      td = link_to 'Edit', edit_admin_menu_path(admin_menu)
-      td = link_to 'Destroy', admin_menu, :confirm => 'Are you sure?', :method => :delete
+      td = link_to 'Show', menu
+      td = link_to 'Edit', edit_admin_menu_path(menu)
+      td = link_to 'Destroy', menu, :confirm => 'Are you sure?', :method => :delete
 
 br
 

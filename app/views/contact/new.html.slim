@@ -1,0 +1,15 @@
+- content_for :title do
+ - 'Contact'
+
+.post
+  h1.title Contact
+  p Want to say hello? Have an interesting idea you would like to share? Send me a message by filling out the form below.
+  h3 <strong>No recruiters please.</strong>
+  .contact-form
+    = simple_form_for @contact, url: contact_path do |f|
+      = f.input :name
+      = f.input :email
+      = f.input :message, as: :text
+      = f.submit 'Send Message', class: 'btn'
+
+    

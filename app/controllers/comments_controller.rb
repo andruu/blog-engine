@@ -18,8 +18,8 @@ class CommentsController < ApplicationController
 
     @comment = page.comments.create params[:comment]
     
-    # Send email if in production
-    CommentMailer.new_comment(@comment).deliver if Blog.env == 'production'
+    # Send email
+    CommentMailer.new_comment(@comment).deliver
 
     render partial: 'comment', locals: { comment: @comment }
   end
