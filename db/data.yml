@@ -1,0 +1,1056 @@
+
+---
+pages:
+  columns:
+  - id
+  - title
+  - body
+  - has_comments
+  - created_at
+  - updated_at
+  - slug
+  - page_type
+  - is_published
+  - comments_count
+  records: 
+  - - '1'
+    - About
+    - ! "###About Andrew\r\n\r\nHello everyone, I'm Andrew. I am a web developer from
+      Toronto, Canada. I'm currently working as a Sr. Software Engineer for [PetFlow.com](http://www.petflow.com).\r\n\r\nI've
+      been working professionally as a web developer for over 10 years now currently
+      specializing in Ruby on Rails, Node.js and PHP. I also enjoy developing mobile
+      applications (iOS/Android) and single page applications using [Angular.js](http://angularjs.org/).\r\n\r\n####Experience\r\n\r\n-
+      **Sr. Software Engineer** PetFlow.com *New York, NY* (2012-Present)\r\n- **Lead
+      Software Engineer** BetterTheWorld.com *Toronto, Canada* (2010-2012)\r\n- **Managing
+      Director** Chooey.com *Toronto, Canada* (2009-2012)\r\n- **Lead Software Engineer**
+      Global Ad Agency *Bangkok, Thailand* (2005-2010)\r\n- **Software Engineer**
+      AzoogleAds *Toronto, Canada* (2003-2005) \r\n\r\n###About this site\r\n\r\nThis
+      blog was a weekend project after deciding to retire my [old blog](http://andrw.net)
+      and start fresh, trying to write more frequently about my ventures into development
+      and my quest to commit more to the open source community.\r\n\r\nThis blog runs
+      on Rails and is hosted by Heroku. All posts are written in markdown and stored
+      via Postgresql. I'm using the new [turbolinks](https://github.com/rails/turbolinks)
+      library to load pages asynchronously saving some bandwidth and speeding up the
+      client.\r\n\r\n#### Source Code\r\n\r\nThe source code for this site is available
+      on [GitHub](https://github.com/andruu/blog-engine)."
+    - false
+    - '2012-11-26 05:03:30.130206'
+    - '2012-12-03 06:16:08.411261'
+    - about
+    - page
+    - true
+    - 
+  - - '2'
+    - Work
+    - ! "###What I'm working on now\r\n\r\n####Polytalk\r\n\r\n[Polytalk](http://polytalk.co)
+      is a simple protocol which allows communication between different languages
+      via TCP. The protocol uses a simple JSON object to pass back and forth request
+      and response information from the server and client.\r\n\r\n- [Ruby implementation](https://github.com/andruu/polytalk-ruby)\r\n-
+      [Node.js implementation](https://github.com/andruu/polytalk-node)\r\n- [PHP
+      implementation](https://github.com/andruu/polytalk-php)\r\n\r\n####PetFlow.com\r\n\r\nAt
+      [PetFlow.com](http://petflow.com) I'm helping to re-architect their existing
+      platform as the customer base grows exponentially. Along with development of
+      their main platform I've developed multiple marketing properties to help grow
+      the company organically via social networking.\r\n\r\n####andru.co (this blog)\r\n\r\nI'm
+      actively adding new functionality to this blog which has been open sourced.
+      The source code can be found [here at GitHub](https://github.com/andruu/blog-engine).\r\n\r\n###What
+      I've worked on in the past\r\n\r\n####BetterTheWorld.com\r\n\r\nAt [BetterTheWorld.com](http://bettertheworld.com)
+      I was the lead developer. Over the course of my tenure at BetterTheWorld I helped
+      design and develop multiple mobile applications and websites for the Pearson
+      Foundation ([WeGiveBooks.org](http://www.wegivebooks.org)), TD Bank and the
+      Heart & Stroke foundation. I also helped realize BetterTheWorld's latest venture
+      [FlipGive.com](http://flipgive.com) a fundraising platform that allows individuals
+      to crowd fund for their cause using giftcards from retailers in Canada and the
+      US.\r\n\r\n#### WSHH Mobile iOS\r\n\r\nDeveloped a highly popular iOS app for
+      leading hip hop video site WorldStarHipHop.com. The app was downloaded over
+      60,000 times in the first month and generated over 2 million requests.\r\n\r\n####Chooey.com\r\n\r\n[Chooey.com](http://chooey.com)
+      is a tracking platform I designed and developed for affiliate marketers. It
+      allows marketers to run multiple campaigns on multiple networks and see their
+      stats and revenue in real time. The base of Chooey had been in use for over
+      4 years tracking millions of clicks for tens of thousands of campaigns. I compiled
+      the best features from the past systems and added some new features along the
+      way.\r\n\r\n\r\n###Legacy work (really old stuff)\r\n\r\nYou can view a rundown
+      of work that I did pre 2009 [here on my old site](http://andrw.net/page/work)."
+    - false
+    - '2012-11-26 05:29:54.700114'
+    - '2012-12-05 17:55:31.683243'
+    - work
+    - page
+    - true
+    - 
+  - - '3'
+    - Welcome to andru.co
+    - ! "After letting my [last blog](http://andrw.net) die I've decided to try my
+      hand at writing again. I've been working with a lot more tools and [contributing
+      more to the open source community](http://polytalk.co) and wanted a place to
+      document the things that I'm learning and an outlet for some of the cool stuff
+      that I'm working on.\r\n\r\nI developed and designed this blog over the course
+      of the weekend. Nothing special really, just a typical hand rolled Rails CMS
+      running on Heroku. One thing cool that this site is using is the new [Turbolinks](https://github.com/rails/turbolinks)
+      library from Rails 4. It is similar to [pjax](https://github.com/defunkt/jquery-pjax)
+      although there is really no configuration. It's basically just plug and play.\r\n\r\nOne
+      thing that I didn't want to do was reinvent a commenting system but after wasting
+      an afternoon trying to get disqus working with Turbolinks with no luck I caved
+      in and wrote a really basic one. Hopefully once disqus has better integration
+      with ajax sites I will be able to integrate them.\r\n\r\nWell stay tuned. I
+      have some interesting posts planned for the next week. Let's hope that I can
+      keep this blog updated more frequently than my last."
+    - true
+    - '2012-11-26 05:44:10.66502'
+    - '2012-12-09 21:07:23.052688'
+    - welcome-to-andruco
+    - post
+    - true
+    - '0'
+  - - '4'
+    - Introducing Polytalk. A simple protocol which allows communication between different
+      languages via TCP.
+    - ! "[Polytalk](http://polytalk.co) is my latest open source project. I developed
+      it out of the need to communicate with a legacy system running PHP while writing
+      code in Ruby and Node.js to leverage the existing business logic.\r\n\r\nThe
+      amazing thing with Polytalk is you don't need to write any extra APIs or write
+      any additional code. All that's needed is the server which is a long running
+      process that exposes classes to the client via TCP.\r\n\r\nHere is a quick overview
+      of what Polytalk taken from the project's page:\r\n\r\n> Polytalk is a simple
+      protocol which allows communication between different languages via TCP. The
+      protocol uses a simple JSON object to pass back and forth request and response
+      information from the server and client.\r\n\r\n> Polytalk currently supports
+      Ruby, Node.js and PHP. Each language module consists of a server and client
+      that both follow the exact same API so implementation is simple. Installation
+      of all the modules is equally as simple, utilizing the popular package managers
+      for each language.\r\n\r\n> Polytalk is plug and play meaning you don't have
+      to do any extra coding to expose your methods from your existing code base.
+      This is great for legacy code or teams of polyglot developers.\r\n> <cite>Polytalk.co</cite>\r\n\r\nPolytalk
+      is currently available for [Ruby](http://polytalk.co/#/ruby), [PHP](http://polytalk.co/#/php)
+      and [Node.js](http://polytalk.co/#/node)."
+    - true
+    - '2012-11-26 05:59:38.278179'
+    - '2012-12-09 21:06:47.524479'
+    - introducing-polytalk-a-simple-protocol-which-allows-communication-between-different-languages-via-tcp
+    - post
+    - true
+    - 
+  - - '5'
+    - Open sourcing this blog. Code on GitHub
+    - ! "I've tidied up the code for this site and decided to open source it if anyone
+      is interested. It's running on Rails with Postgres as the database. Posts are
+      stored as markdown using the fantastic [EpicEditor](http://epiceditor.com/)
+      markdown editor.\r\n\r\nTo get started you need to create a user. You can either
+      uncomment out the user resources in the routes file and create the user using
+      the web interface or use the console to generate the user. I recommend using
+      the console at this point since any registered user has access to the admin
+      console.\r\n\r\n###Steps to create a new user via the console\r\n\r\n```sh\r\n$
+      rails console\r\nLoading development environment (Rails 3.2.8)\r\nirb(main):001:0>
+      User.create(email: 'andrew@andru.co', password: 'mypassword')\r\n```\r\n\r\nOnce
+      your user is created you can login via /login and access the admin via /admin.\r\n\r\nYou
+      can find the blog engine on GitHub at https://github.com/andruu/blog-engine.
+      One big thing I still need to add is testing which should come this week.\r\n\r\nIf
+      you see any bugs go ahead and send a pull request and if you have any questions
+      you can leave them in the comments below."
+    - true
+    - '2012-11-26 13:49:46.069732'
+    - '2012-12-09 21:07:13.066678'
+    - open-sourcing-this-blog-code-on-github
+    - post
+    - true
+    - 
+  - - '6'
+    - Getting rid of .DS_Store files in your git repository
+    - ! "One thing that really bugs me is seeing a repository full of .DS_Store files.
+      I am an offender myself, but now it's time to put an end to this tragedy. The
+      .DS_Store file is a OS X proprietary format for storing information about the
+      folder such as where the icons are placed, the background image etc.\r\n\r\nWhen
+      you run `git init` it should automatically create a .gitignore file and mark
+      these files as evil!\r\n\r\n###Steps\r\n\r\nAdd the following to your .gitignore
+      file (if you don't have one yet you can run `touch .gitignore`):\r\n\r\n```\r\n*.DS_Store\r\n```\r\n\r\nRun
+      the following in your git repository root:\r\n\r\n```sh\r\nfind . -name \".DS_Store\"
+      -depth -exec rm {} \\;\r\n```\r\n\r\nNow just commit your changes, and although
+      they might show up again locally they will never be committed to the repository
+      again.\r\n"
+    - true
+    - '2012-11-27 16:32:08.107938'
+    - '2012-12-09 21:06:23.36178'
+    - getting-rid-of-dsstore-files-in-your-git-repository
+    - post
+    - true
+    - '0'
+  - - '7'
+    - Rails 3 full page caching on Heroku
+    - ! "Recently I implemented full page caching on this blog. Not because of the
+      insane amount of traffic I've been receiving (10 hits a day) but because it
+      was something I wanted to experiment with and I also wanted to squeeze some
+      more speed out of this CMS.\r\n\r\nUsing Turbolinks the pages were loading fast
+      but now with the full page caching clicking on a link instantly shows the new
+      page. You don't even have time to blink!\r\n\r\n### Page Caching\r\n\r\nSo I
+      went about my way implementing Rails page caching which basically caches the
+      entire page including the layout to a static html file in your public directory.
+      This has the advantage of not hitting the rails stack and it's called directly
+      from the web server (nginx/apache). There are a few gotchas when implementing
+      page caching in rails. First you can't really have anything dynamic which for
+      this site doesn't seem like to much of a problem at first, although when you
+      update a post or someone leaves a comment the web server continues to serve
+      up the static html file leaving you scratching your head.\r\n\r\nRails has some
+      awesome utilities to get around this. There is the `expire_page` method which
+      allows you to pass in a route to remove the static file. This is useful after
+      updating a post or when someone leaves a comment. At first I created a helper
+      method to clear the cache until I came across Rail's [cache sweepers](http://guides.rubyonrails.org/caching_with_rails.html#sweepers).
+      These allow you to observe a model and run methods after save, update and destroy.
+      So I moved all of my caching logic into the sweeper so that whenever a post
+      is updated the cache is cleared for the post and any other page that contains
+      post data (home page, archives, etc.).\r\n\r\nHere is the sweeper I originally
+      used:\r\n\r\n```ruby\r\nclass PageSweeper < ActionController::Caching::Sweeper\r\n
+      \ observe Page\r\n\r\n  def sweep(page)\r\n    # Page Caching\r\n    expire_page
+      pages_path\r\n    expire_page page_path(page.slug)\r\n    expire_page '/'\r\n
+      \   expire_page archives_path\r\n    FileUtils.rm_rf \"#{page_cache_directory}/pages\"\r\n
+      \ end\r\n\r\n  alias_method :after_create, :sweep\r\n  alias_method :after_update,
+      :sweep\r\n  alias_method :after_destroy, :sweep\r\nend\r\n```\r\n\r\nSo everything
+      is running quick, Rails doesn't have to serve up pages anymore but wait... unfortunately
+      Heroku doesn't support page caching.\r\n\r\n> Heroku has an ephemeral file store,
+      so while page caching may appear to work, it won’t work as intended.\r\n> <cite>https://devcenter.heroku.com/articles/caching-strategies#page-caching</cite>\r\n\r\nI
+      didn't realize this until after checking out the logs and doing a bit of research.
+      After reading their [caching strategies page](https://devcenter.heroku.com/articles/caching-strategies)
+      I decided to use action caching.\r\n\r\n### Action Caching\r\n\r\nAction caching
+      works similarly to page caching although it still hits the Rails stack. There
+      are some advantages to using the action cache over the page cache such as being
+      able to access your before filters to determine if a user's logged in or whatever
+      you usually do in the before filter.\r\n\r\nAction cache uses in memory stores
+      (memcache usually) to cache the html of the page. You can opt-out of caching
+      the layout if you want to keep certain things dynamic such as if a user is logged
+      in and just cache the html of the action itself.\r\n\r\nAfter implementing the
+      action cache I really couldn't tell the difference between it and page caching.
+      It was still super fast and made clicking on links seem like they were static
+      html files. Action caching uses an almost identical API to page caching with
+      a few small differences.\r\n\r\nI decided to keep both page and action caching
+      in case one day I move away from Heroku to a host with a standard file system.
+      I ended up creating some configuration to determine whether to use page or action
+      caching.\r\n\r\nIn the pages controller:\r\n\r\n```ruby\r\ncaches_page :index,
+      :show, :archives if Blog.cache == :page\r\ncaches_action :index, :show, :archives
+      if Blog.cache == :action\r\n```\r\n\r\nAnd I updated my sweeper method to clear
+      the cache based on the configuration:\r\n\r\n```ruby\r\nclass PageSweeper <
+      ActionController::Caching::Sweeper\r\n  observe Page\r\n\r\n  def sweep(page)\r\n\r\n
+      \   if Blog.cache == :page\r\n      \r\n      # Page Caching\r\n      expire_page
+      pages_path\r\n      expire_page page_path(page.slug)\r\n      expire_page '/'\r\n
+      \     expire_page archives_path\r\n      FileUtils.rm_rf \"#{page_cache_directory}/pages\"\r\n\r\n
+      \   elsif Blog.cache == :action\r\n\r\n      # Action Caching\r\n      expire_action
+      controller: '/pages', action: :index\r\n      expire_action \"#{request.host}/#{page.slug}\"\r\n
+      \     expire_action controller: '/pages', action: :archives\r\n\r\n      # Remove
+      pages cache\r\n      pages = (Page.published_posts.count.to_f / Blog::POSTS_PER_PAGE.to_f).ceil\r\n
+      \     1.upto(pages) { |p| expire_action \"#{request.host}/pages/#{p}\" }\r\n\r\n
+      \   end\r\n\r\n  end\r\n\r\n  alias_method :after_create, :sweep\r\n  alias_method
+      :after_update, :sweep\r\n  alias_method :after_destroy, :sweep\r\nend\r\n```\r\n\r\n###
+      Loading dynamic partials\r\n\r\nSince originally I was using full page caching
+      I decided to load certain parts of the page via ajax and partials. For the most
+      part this just checks if the admin is logged in and will show extra links in
+      the navigation and options to moderate comments. I am also loading in the recent
+      posts in the side bar via ajax so that I don't have to clear every page from
+      the cache when adding a new post.\r\n\r\nI will write another post on some of
+      the cool techniques I used to only load the partials once via ajax per viewing
+      session, since Turbolinks doesn't do full page refreshes.\r\n\r\n#### More reading\r\n\r\n-
+      [Ruby on Rails Caching Guide](http://guides.rubyonrails.org/caching_with_rails.html)\r\n-
+      [RailsCast Page Caching](http://railscasts.com/episodes/89-page-caching)\r\n-
+      [RailsCast Action Caching](http://railscasts.com/episodes/93-action-caching)"
+    - true
+    - '2012-11-28 22:50:10.064272'
+    - '2012-12-09 21:06:04.585888'
+    - rails-3-full-page-caching-on-heroku
+    - post
+    - true
+    - '2'
+  - - '8'
+    - Caching dynamic partials when using Turbolinks
+    - ! "Yesterday [I blogged about caching](http://andru.co/rails-3-full-page-caching-on-heroku)
+      and loading dynamic partials via ajax for non static content. This can sometimes
+      defeat the purpose of caching content if you are hitting the rails stack and
+      accessing the database each time the page loads via ajax.\r\n\r\nTurbolinks
+      only loads assets on the original page load, after that it just replaces the
+      body content. This gave me an idea. Load my dynamic partials only on a _real_
+      page load and not everytime Turbolinks requests a new page.\r\n\r\n### Caching\r\n\r\nOutside
+      of any document ready methods (usually top of your main application js/coffee
+      file) I place my cache holder variables. In this example I will show you how
+      I load and cache the recent posts on this blog.\r\n\r\n```coffeescript\r\nwindow.cachedRecentPosts
+      = ''\r\n```\r\n\r\nThen in the document ready and Turbolinks `'page:load'` event
+      I check to see if there is anything in the cache holder. If there is I just
+      populate the html with the cached content or call the script via ajax to get
+      the new content.\r\n\r\n```coffeescript\r\n# Load recent posts\r\nif window.cachedRecentPosts
+      != ''\r\n  $('ul.recent-posts').append(window.cachedRecentPosts)\r\nelse\r\n
+      \ $.getScript('/pages/recent_posts')\r\n```\r\n\r\nWhen /pages/recent_posts
+      is called via `$.getScript()` it loads app/views/pages/recent_posts.js.erb which
+      will populate the `window.cachedRecentPosts` variable with the recent posts
+      and also populate the html with the content.\r\n\r\n```javascript\r\nwindow.cachedRecentPosts
+      = '<%= j render(\"layouts/recent_posts\") %>';\r\n$('ul.recent-posts').append(window.cachedRecentPosts);\r\n```\r\n\r\nThe
+      above script will only be called on the original page load with subsequent requests
+      using the cached content greatly improving the speed of the page and lessening
+      the load on the server."
+    - true
+    - '2012-11-30 02:47:23.483249'
+    - '2012-12-09 21:06:13.886855'
+    - caching-dynamic-partials-when-using-turbolinks
+    - post
+    - true
+    - 
+  - - '9'
+    - Tips for dynamic CSS themes using jQuery
+    - ! "I recently added a dark theme to this blog, it's great for night time reading
+      on your laptop, tablet or phone. This is the first time I've implemented dynamic
+      theming on a site and it was super simple to integrate. I thought I would share
+      my thoughts and the implementation strategies I used.\r\n\r\n### Integration\r\n\r\nThe
+      first thing I did was add a class to my body tag, in my case the class name
+      was `dark`. Using Sass or Less will make the following a lot easier although
+      it's doable with plain css.\r\n\r\nBasically what you want to do is create a
+      new body.theme-name definition in your stylesheet and using scss I was able
+      to nest the rest of my styles underneath this.\r\n\r\n```css\r\nbody.dark {\r\n
+      \ a {\r\n    color:lighten($main-color, 20%);\r\n  }\r\n  background-color:#111;\r\n
+      \ color:#ddd;\r\n  /* rest of your styles you want to override */\r\n}\r\n```\r\n\r\nAfter
+      I got everything looking how I wanted I removed the class from the body since
+      I didn't want this to be the default. The idea here is dynamically add the class
+      to the body when the user wants to switch the theme. I also wanted to be able
+      to remember the user's choice so on subsequent page loads it would load the
+      correct theme. This is easy enough with jQuery and the [jQuery cookie plugin](https://github.com/carhartl/jquery-cookie).\r\n\r\n```coffeescript\r\n$('.change-theme').on
+      'click', ->\r\n  if $('body').hasClass('dark')\r\n    $.cookie('dark_mode',
+      'false')\r\n  else\r\n    $.cookie('dark_mode', 'true')\r\n  $('body').toggleClass('dark')\r\n```\r\n\r\nThe
+      above code listens for a click on my change theme button. If the body already
+      has a class name of dark I then set a cookie with the user's preference and
+      toggle the theme. I do the opposite if the body doesn't have the class name.\r\n\r\nI
+      now needed a way to load the theme depending on the user's preference that was
+      in the cookie. Again this is quite easy to do.\r\n\r\n```coffeescript\r\nif
+      $.cookie('dark_mode') is 'true'\r\n  $('body').addClass('dark')\r\n```\r\n\r\nI'm
+      sure there are some jQuery plugins out there that do this for you already but
+      it's easy enough to roll your own and it gives you more control over the implementation.
+      I hope you enjoyed this post and if you have any questions or suggestions on
+      how to improve this implementation leave a comment below."
+    - true
+    - '2012-11-30 16:47:47.053022'
+    - '2012-12-09 21:05:05.428551'
+    - tips-for-dynamic-css-themes-using-jquery
+    - post
+    - true
+    - 
+  - - '10'
+    - Resetting JavaScript variables when using Turbolinks
+    - ! "Every time you load a new page with Turbolinks only the body of the page
+      is replaced. This means that the JavaScript environment stays the same and any
+      variables you've set will remain the same. Sometimes this is actually welcome
+      behaviour as I posted previously about [caching dynamic partials](http://andru.co/caching-dynamic-partials-when-using-turbolinks)
+      but sometimes you want to reset those variables since the context has changed
+      on the new page load.\r\n\r\n### Resetting JavaScript variables\r\n\r\nA simple
+      work around is to just delete the variable and set it again using the Turbolinks
+      `page:load` event or in a script loaded by the new page. This is the method
+      I use for the tweet links at the bottom of my posts.\r\n\r\n```javascript\r\ndelete
+      tweet;\r\nvar tweet = function () {\r\n  var left = (screen.width/2)-(600/2);\r\n
+      \ var top = (screen.height/2)-(300/2);\r\n  window.open(\r\n    \"https://twitter.com/share?via=andruu&text=Check
+      out #{page.title}&url=#{page_url(page.slug)}\",\r\n    \"Tweet Post\", \"width=600,height=300,top=\"+top+\",left=\"+left+\"\"\r\n
+      \ );\r\n  return false;\r\n}\r\n```\r\n\r\nYou will see that I actually call
+      `delete tweet;` before I set the variable. If I didn't do this the `tweet` variable
+      would be set to function the first time it was called and would remain the same
+      after loading a new page."
+    - true
+    - '2012-12-01 23:05:30.083065'
+    - '2012-12-09 21:04:47.245494'
+    - resetting-javascript-variables-when-using-turbolinks
+    - post
+    - true
+    - 
+  - - '11'
+    - Building a simple single page application using Angular.js
+    - ! "I am going to walk you through building a SPA (single page application) using
+      [Angular.js](http://angularjs.org), Google's latest JavaScript MVC framework.
+      After developing applications using [Backbone.js](http://backbonejs.org), [Spine.js](http://spinejs.com/)
+      and good ol' jQuery I fell in love with Angular.js. It makes development of
+      SPAs actually fun removing a lot of the boilerplate that most of the other frameworks
+      make you write to get a simple app started.\r\n\r\nThe app we are going to build
+      today is a simple multipage website that will read data in from a static JSON
+      file. We will be covering setting up Angular.js, routing, rendering partials,
+      communication between controllers and loading JSON asynchronously.\r\n\r\n-
+      [**Download the source code**](https://dl.dropbox.com/u/28763/angular-tutorial/angular-tutorial.zip)\r\n-
+      [**View the demo**](https://dl.dropbox.com/u/28763/angular-tutorial/index.html#/page/home)\r\n\r\n####
+      Sections\r\n\r\n- [Setting up Angular.js](#setup)\r\n- [Routing](#routing)\r\n-
+      [Rendering partials](#partials)\r\n- [Loading JSON](#json)\r\n- [Communicating
+      between controllers](#communicate)\r\n\r\nBefore we get started it's a good
+      idea to watch the intro videos on [angularjs.org](http://angularjs.org) as they
+      cover most of the basics. I'm going to assume that you understand the concepts
+      of how the controller binds `$scope` with the views and how the `ng-model` directive
+      works.\r\n\r\n###<a id=\"setup\"></a>Setting up Angular.js\r\n\r\nThis tutorial
+      will require you to run these files via a web server. If you have apache/MAMP/WAMP
+      set up you should be able to create a new directory under your webroot and access
+      via localhost. I like to run the npm module [nws](https://npmjs.org/package/nws)
+      which creates a web server in the current directory allowing me to get started
+      quickly.\r\n\r\n#### Html\r\n\r\nThe first thing you will want to do is setup
+      your module. You do this by adding the `ng-app` attribute to your html tag.
+      In the case of our application we will call our module `Site`.\r\n\r\n```html\r\n<html
+      lang=\"en-US\" ng-app=\"Site\">\r\n```\r\n\r\nThe next thing we want to do is
+      set up a controller. The controller is bound to the element you add it to and
+      it's children. We are going to add an `AppController` to our body tag which
+      allows the entire body to inherit from this controller. To add a controller
+      you use the `ng-controller` attribute.\r\n\r\n```html\r\n<body ng-controller=\"AppController\">\r\n```\r\n\r\n[Here
+      is a template](https://gist.github.com/4199093) including Angular.js from [CDNJS](http://cdnjs.com)
+      that I will be using throughout this tutorial.\r\n\r\n#### JavaScript\r\n\r\nNow
+      that our html is set up we need to create the module and controller in our `/js/site.js`
+      file that is included.\r\n\r\n```javascript\r\nvar Site = angular.module('Site',
+      []);\r\n\r\nfunction AppController ($scope) {\r\n}\r\n```\r\n\r\nThe first line
+      creates our `Site` module and the function defines our `AppController`. The
+      controller receives one argument (at the moment) `$scope` which binds models
+      between the view (html) and controller.\r\n\r\n###<a id=\"routing\"></a>Routing\r\n\r\nIf
+      you took a look at the template above you will have noticed that there are three
+      links in the nav bar: Home, About and Contact. We want to be able to route to
+      these links and load a section from the JSON file based on the slug.\r\n\r\nThe
+      first thing we need to do is configure our `Site` module to use the `$routeProvider`
+      and then set up our routes.\r\n\r\n```javascript\r\nSite.config(function ($routeProvider)
+      {\r\n  $routeProvider\r\n    .when('/page/:slug', {templateUrl: 'partials/page.html',
+      controller: 'RouteController'})\r\n    .otherwise({redirectTo: '/page/home'});\r\n});\r\n```\r\n\r\nWe
+      are passing in an anonymous function to the modules `config` method. In the
+      function we are passing in Angular's `$routeProvider` service which allows us
+      to define routes. The two methods we are using are `when()` which takes a path
+      and hash of options including the `templatePath` and `controller` and `otherwise()`
+      which allows us to redirect to a route if one is not found.\r\n\r\nWe are defining
+      one route for this application `/page/:slug`. This path contains the `:slug`
+      parameter, we can use this later using the `$routeParams` service to extract
+      the page data from the JSON.\r\n\r\nWe are also setting a controller for this
+      route (RouteController). This controller is in charge of binding the page content
+      to the view.\r\n\r\n```javascript\r\nfunction RouteController ($scope, $routeParams)
+      {\r\n  // Getting the slug from $routeParams\r\n  var slug = $routeParams.slug;\r\n
+      \ \r\n  // We need to get the page data from the JSON\r\n  // $scope.page =
+      ?;\r\n}\r\n```\r\n\r\nNow when you try and visit the page you should be redirected
+      to `/#/home` and if you try and type in anything else it will redirect you back.\r\n\r\n###<a
+      id=\"partials\"></a>Rendering Partials\r\n\r\nWhen we defined our route we set
+      a `templateUrl`. This points to a static html file that contains 2 simple expressions
+      containing properties that will be bound to the RouteController's `$scope`.
+      \r\n\r\n```html\r\n<!-- partials/page.html -->\r\n<h1>{{page.title}}</h1>\r\n{{page.content}}\r\n```\r\n\r\nTo
+      include this partial into your layout you need to use the `<ng-view></ng-view>`
+      directive. This will automatically be replaced with the partial set in the routes.
+      You can see that this is included already in the template provided above.\r\n\r\n###<a
+      id=\"json\"></a>Loading JSON\r\n\r\nLet's load some data into this application.
+      I've created a simple static JSON data store (in real life this would probably
+      be generated by an API) which we will load in via Ajax when the application
+      starts.\r\n\r\n```javascript\r\n// pages.json\r\n{\r\n  \"home\": {\r\n    \"title\":
+      \"Home\",\r\n    \"content\": \"This is the home page. Welcome\"\r\n  },\r\n
+      \ \"about\": {\r\n    \"title\": \"About\",\r\n    \"content\": \"This is the
+      about page. Welcome\"\r\n  },\r\n  \"contact\": {\r\n    \"title\": \"Contact\",\r\n
+      \   \"content\": \"This is the contact page. Welcome\"\r\n  }\r\n}\r\n```\r\n\r\nWe
+      should only load the JSON file once, cache it to a variable and access the variable
+      when we need the data. Let's use Angular's `$http` service to grab the JSON
+      file. To use the `$http` service we will need to pass it as an argument to the
+      `AppController`.\r\n\r\n```javascript\r\nfunction AppController ($scope, $rootScope,
+      $http) {\r\n  // Load pages on startup\r\n  $http.get('/pages.json').success(function
+      (data) {\r\n    $rootScope.pages = data;\r\n  });\r\n}\r\n```\r\n\r\nWe are
+      also passing in `$rootScope` which all scopes inherit from. We do this so this
+      so that we can access the pages JSON data in our RouteController. We can then
+      access the page data by using the slug we captured earlier and bind it to the
+      scope so it's accessible in our partial.\r\n\r\n```javascript\r\nfunction RouteController
+      ($scope, $rootScope, $routeParams) {\r\n  // Getting the slug from $routeParams\r\n
+      \ var slug = $routeParams.slug;\r\n  \r\n  $scope.page = $rootScope.pages[slug];\r\n}\r\n```\r\n\r\n###<a
+      id=\"communicate\"></a>Communicating between controllers\r\n\r\nWe've already
+      demonstrated one way to communicate between controllers using the `$rootScope`.
+      Another option is using events. In Angular you can emit events and listen to
+      events in different controllers while passing data from the emitter to the listener.\r\n\r\nWe
+      want to pass the slug from the RouteController to the AppController so that
+      we can set the active class on the current menu link. Angular has a `ng-class`
+      directive which allows you to add conditional classes to elements.\r\n\r\n```html\r\n<li
+      ng-class=\"{active: slug == 'home'}\"><a href=\"/#/page/home\">Home</a></li>\r\n<li
+      ng-class=\"{active: slug == 'about'}\"><a href=\"/#/page/about\">About</a></li>\r\n<li
+      ng-class=\"{active: slug == 'contact'}\"><a href=\"/#/page/contact\">Contact</a></li>\r\n```\r\n\r\nYou
+      can see that the `RouteController` is emitting the slug and the `AppController`
+      is listening for the slug which then sets it onto it's scope and exposes it
+      to the view.\r\n\r\n```javascript\r\nfunction AppController ($scope, $rootScope,
+      $http) {\r\n  // Load pages on startup\r\n  $http.get('/pages.json').success(function
+      (data) {\r\n    $rootScope.pages = data;\r\n  });\r\n\r\n  // Set the slug for
+      menu active class\r\n  $scope.$on('routeLoaded', function (event, args) {\r\n
+      \   $scope.slug = args.slug;\r\n  });\r\n}\r\n\r\nfunction RouteController ($scope,
+      $rootScope, $routeParams) {\r\n  // Getting the slug from $routeParams\r\n  var
+      slug = $routeParams.slug;\r\n  \r\n  $scope.$emit('routeLoaded', {slug: slug});\r\n
+      \ $scope.page = $rootScope.pages[slug];\r\n}\r\n```\r\n\r\nI hope you guys enjoyed
+      this walkthrough. I will be writing more about Angular.js in the future. If
+      you guys have any questions about this post or have any topics you are interested
+      in let me know in the comments.\r\n\r\n- [**Download the source code**](https://dl.dropbox.com/u/28763/angular-tutorial/angular-tutorial.zip)\r\n-
+      [**View the demo**](https://dl.dropbox.com/u/28763/angular-tutorial/index.html#/page/home)"
+    - true
+    - '2012-12-04 03:05:52.207828'
+    - '2012-12-09 20:39:37.655958'
+    - building-a-simple-single-page-application-using-angularjs
+    - post
+    - true
+    - '0'
+  - - '12'
+    - Phalcon the PHP framework written in C
+    - ! "Over the past few years the PHP community has matured and evolved immensely
+      \ The language itself has seen some amazing new features over the past few releases.
+      We now have array literals (`$names = ['andrew', 'tom', 'steve'];`), function
+      array dereferencing (`$first_name = explode(' ', $name)[0];`), anonymous functions,
+      closures and traits (similar to mixins). There is [composer](http://getcomposer.org/)
+      a package manager similar to npm or bundler and a huge repository [Packagist](https://packagist.org/)
+      to go along with it.\r\n\r\nAlthough my focus has been on Ruby on Rails and
+      Node.js recently I still use PHP in my day to day work. For the last 5 years
+      [CakePHP](http://cakephp.org) has been my framework of choice but with the crop
+      of new frameworks emerging I decided I would do some research and see what else
+      is out there.\r\n\r\nIt seems like [Laravel](http://laravel.com/) is getting
+      a lot of recognition these days as it rightfully should. It utilizes most of
+      PHP's new features, has amazing documentation, a budding community and a consistent
+      API. All of these features are great but at the end of the day it's not that
+      different from CakePHP which I've already invested over 5 years learning (mastering).
+      The same goes for a bunch of the new frameworks that have either been updated
+      ([Symfony 2](http://symfony.com/), [Zend Framework 2](http://framework.zend.com/))
+      or emerged on the scene ([Fuel](http://fuelphp.com/)).\r\n\r\n### Along comes
+      Phalcon\r\n\r\n[Phalcon](http://phalconphp.com) is similar in the sense that
+      it is a PHP MVC framework, but what sets it apart is that it's a PHP extension
+      written in C. This has a lot of advantages.\r\n\r\n#### Speed\r\n\r\nIn [benchmarks](http://docs.phalconphp.com/en/0.7.0/reference/benchmark/hello-world.html)
+      it is shown to be an order of magnitude faster than most popular PHP frameworks
+      out today. This makes sense, since the code is compiled for your system and
+      doesn't have to be interpreted at runtime.\r\n\r\n#### Forget about framework
+      files\r\n\r\nAnother amazing feature is that all the classes and functions are
+      available to you anytime anywhere. No need to download a 40MB framework every
+      time you want to start up a new project. All of the components are loosely coupled
+      so if you want to write a simple script that just uses Phalcon's ORM classes,
+      just call them like you would any other php functions. No need for includes
+      and managing files.\r\n\r\n#### Installation\r\n\r\nInstallation was a breeze
+      on my MacBook Air. Initially I tried installing via homebrew but that was giving
+      me problems. I ended up following the [instructions on their website](http://docs.phalconphp.com/en/0.7.0/reference/install.html#unix-linux),
+      restarted my server and away I went.\r\n\r\n> Creating the extension:\r\n\r\n>
+      ```shell\r\n> git clone git://github.com/phalcon/cphalcon.git\r\n> cd cphalcon/build\r\n>
+      sudo ./install\r\n> ```\r\n\r\n> Add extension to your php.ini\r\n\r\n> ```\r\n>
+      extension=phalcon.so\r\n> ```\r\n\r\n> Restart the webserver\r\n> <cite>http://docs.phalconphp.com/en/0.7.0/reference/install.html</cite>\r\n\r\n####
+      Caveats\r\n\r\nThis won't work on most shared hosting accounts since this has
+      to be installed usually at a root level although I wouldn't be surprised if
+      some hosts started adding it to their default installations in the future.\r\n\r\n####
+      What's next\r\n\r\nI plan on writing a few more posts on Phalcon in the next
+      week. Next up will be setting Phalcon up on Heroku. Stay tuned!\r\n"
+    - true
+    - '2012-12-05 00:17:49.130883'
+    - '2012-12-09 20:39:12.428955'
+    - phalcon-the-php-framework-written-in-c
+    - post
+    - true
+    - '4'
+  - - '13'
+    - Setting up Phalcon on Heroku
+    - ! "Yesterday [I blogged about Phalcon](http://andru.co/phalcon-the-php-framework-written-in-c),
+      the PHP framework written in C. At the end of the post I said I would show you
+      guys how to setup Phalcon on Heroku. After a bit of research and building out
+      a demo app I have it up and running on Heroku. I've simplified the process into
+      3 steps.\r\n\r\n- **[Check out the demo](http://phalcon.herokuapp.com/)**\r\n-
+      **[Check out the git repository](https://github.com/andruu/Phalcon-on-Heroku)**\r\n\r\n###
+      (Optional) Clone my demo application\r\n\r\nI built a simple blogging application
+      that utilizes Phalcon's Micro MVC router (think Sinatra), models with relationships,
+      views, autoloading and a few other features. It's very rudimentary containing
+      only a few methods to create posts, view posts and add comments to posts.\r\n\r\n```shell\r\n$
+      git clone https://github.com/andruu/Phalcon-on-Heroku.git\r\n```\r\n\r\n###
+      Create a new application on Heroku\r\n\r\nMake sure that you have the [Heroku
+      toolbelt](https://toolbelt.heroku.com/) installed and you are logged into your
+      Heroku account. Next you will have to create your app using a custom buildpack.
+      [Buildpacks](https://devcenter.heroku.com/articles/buildpacks) allow you to
+      customize your instance with different modules and allow you to configure it
+      exactly how you want it. Create your new application and commit the code with
+      the command below.\r\n\r\n```shell\r\n$ heroku create phalcon --buildpack git://github.com/elct9620/heroku-buildpacks-php-with-phalcon.git\r\n$
+      git push heroku\r\n```\r\n\r\n### Add the ClearDB MySQL add-on\r\n\r\nI was
+      having trouble getting Heroku's built in PostgreSQL to work well with Phalcon
+      but no worries Heroku has a free add-on for MySQL. Run the following command
+      to setup your MySQL database.\r\n\r\n```shell\r\n$ heroku addons:add cleardb:ignite\r\n```\r\n\r\n###
+      Setup the database\r\n\r\nNow you just have to create your tables. Your MySQL
+      connection information is stored on Heroku as an environment variable which
+      is already detected if you are using the demo app provided. You will need to
+      setup the tables before you can use your app. You can get the credentials by
+      running the following command.\r\n\r\n```shell\r\n$ heroku config\r\n```\r\n\r\nLook
+      for the `CLEARDB_DATABASE_URL` variable. You can now use this to login to MySQL
+      via the command line or your favourite GUI. Once logged in run the following
+      SQL to create your tables.\r\n\r\n```sql\r\nSET NAMES utf8;\r\nSET FOREIGN_KEY_CHECKS
+      = 0;\r\n\r\n-- ----------------------------\r\n--  Table structure for `comments`\r\n--
+      ----------------------------\r\nDROP TABLE IF EXISTS `comments`;\r\nCREATE TABLE
+      `comments` (\r\n  `id` int(11) NOT NULL AUTO_INCREMENT,\r\n  `post_id` int(11)
+      DEFAULT NULL,\r\n  `name` varchar(255) DEFAULT NULL,\r\n  `comment` text,\r\n
+      \ PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;\r\n\r\n--
+      ----------------------------\r\n--  Table structure for `posts`\r\n-- ----------------------------\r\nDROP
+      TABLE IF EXISTS `posts`;\r\nCREATE TABLE `posts` (\r\n  `id` int(11) NOT NULL
+      AUTO_INCREMENT,\r\n  `title` varchar(255) DEFAULT NULL,\r\n  `body` text,\r\n
+      \ PRIMARY KEY (`id`)\r\n) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;\r\n\r\nSET
+      FOREIGN_KEY_CHECKS = 1;\r\n```\r\n\r\nThat's it you should now be up and running.
+      Test out your application by running.\r\n\r\n```shell\r\n$ heroku open\r\n```"
+    - true
+    - '2012-12-06 06:40:30.132729'
+    - '2012-12-09 20:38:55.704896'
+    - setting-up-phalcon-on-heroku
+    - post
+    - true
+    - 
+  - - '14'
+    - Polytalk Ruby Gem updated
+    - ! "I just pushed some changes to the [Polytalk Ruby Gem](https://github.com/andruu/polytalk-ruby)
+      to allow symbols to be used as arguments. Also all keys in hashes now default
+      to symbols when using the Ruby server. To use use a symbol instead of a string
+      you simply prepend a colon `:` infront of the argument.\r\n\r\nFor instance
+      to call the `find` method on the post model and return the first post I would
+      do the following:\r\n\r\n```ruby\r\nclient = Polytalk::Client.new({ port: 9090
+      })\r\n\r\nrequest = {\r\n    class: 'Post',\r\n    method: 'find',\r\n    arguments:
+      {\r\n      type: ':first'\r\n    }\r\n}\r\n\r\nputs client.call(request)\r\n```\r\n\r\nAnd
+      to implement the server I would do the following:\r\n\r\n```ruby\r\nclass Post
+      < ActiveRecord::Base\r\nend\r\n\r\nserver = Polytalk::Server.new({ port: 9090
+      })\r\nserver.run do |connection, request|\r\n  response = server.call(request)\r\n
+      \ server.push(connection, response)\r\nend\r\n```\r\n\r\nI'm planning a post
+      of using [Polytalk](http://polytalk.co) with [Meteor](http://meteor.com) in
+      the near future. Stay tuned!"
+    - true
+    - '2012-12-08 05:25:40.022027'
+    - '2012-12-09 20:38:43.649477'
+    - polytalk-ruby-gem-updated
+    - post
+    - true
+    - 
+  - - '15'
+    - Using Polytalk inside a Meteor Application
+    - ! "I've put together a simple demo that integrates [Polytalk](http://polytalk.co)
+      with [Meteor](http://meteor.com). The app allows you to retrieve, create and
+      delete posts from a Ruby Polytalk server that is exposing a simple Post ActiveRecord
+      model.\r\n\r\n- **[Check out the git repository](https://github.com/andruu/polytalk_meteor)**\r\n\r\nThe
+      app utilizes Meteor's latency compensation and keeps the database updated on
+      both the Meteor app and the Ruby server. We do this by loading in all the posts
+      from the server into a Meteor collection that we keep updated every time you
+      create or delete a post.\r\n\r\nFor the most part the code will look familiar
+      to anyone who's played around with a Meteor app before. We have 3 methods on
+      the server that we expose to the client that will load posts, save a post and
+      remove a post. The one tricky part is in the `loadPosts` method that synchronizes
+      the Meteor collection with the posts from the Ruby server.\r\n\r\n```coffeescript\r\n#
+      Load posts from Polytalk\r\nloadPosts = ->\r\n\r\n  # Remove all posts from
+      collection\r\n  Posts.remove({})\r\n\r\n  postsRequest =\r\n    class: 'Post'\r\n
+      \   method: 'find'\r\n    arguments:\r\n      type: ':all'\r\n      options:\r\n
+      \       order: 'id DESC'\r\n        limit: 10\r\n\r\n  client.call postsRequest,
+      (response) ->\r\n    posts = response.map (post) -> post.post\r\n    for post
+      in posts\r\n      Fiber ->\r\n        Posts.insert({dbid: post.id, title: post.title,
+      body: post.body, time: Date.now()})\r\n      .run()\r\n\r\n  return true\r\n```\r\n\r\nOnce
+      we receive the posts from the server we need to insert the posts into the collection
+      in a [Fiber](https://github.com/laverdet/node-fibers/) so it doesn't lock up
+      other parts of the application.\r\n\r\n### Run the demo\r\n\r\nThe git repository
+      has the app and the ruby server included. To get it running you will need to
+      `cd` into the `ruby_server` directory and run `bundle` to download the gems.
+      Once downloaded while in the `ruby_server` directory run `ruby server.rb` to
+      start the Polytalk server. This will setup the database and expose the Post
+      model to the client.\r\n\r\nOnce the Ruby server is running you can `cd` back
+      to the root of the project and run the Meteor app with `meteor`. You should
+      now be able to visit the app in your browser and start adding and removing posts.\r\n\r\nThat's
+      it, let me know if you have any questions or suggestions below in the comments."
+    - true
+    - '2012-12-09 16:38:08.71233'
+    - '2012-12-09 20:56:04.919505'
+    - using-polytalk-inside-a-meteor-application
+    - post
+    - true
+    - 
+
+---
+comments:
+  columns:
+  - id
+  - name
+  - url
+  - comment
+  - page_id
+  - created_at
+  - updated_at
+  - email
+  records: 
+  - - '7'
+    - David
+    - http://davemode.com
+    - Nice article.  Only comment I would have is to perhaps move the Blog.cache setting
+      into settings.yml or a specific blog_settings.yml configuration file, as it
+      seems to be more of a project wide thing and not necessarily related to the
+      model logic.
+    - '7'
+    - '2012-11-29 07:40:36.948786'
+    - '2012-11-29 07:40:36.948786'
+    - davidjairala@gmail.com
+  - - '10'
+    - Andrew Weir
+    - http://www.andru.co
+    - ! "@David thanks for the comment. `Blog` is actually a module inside of the
+      initializers directory where I currently store my settings. I agree that a yaml
+      file would be more ideal though.\r\n\r\nhttps://github.com/andruu/blog-engine/blob/master/config/initializers/blog.rb"
+    - '7'
+    - '2012-11-29 13:34:08.807137'
+    - '2012-11-29 13:34:08.807137'
+    - andru.weir@gmail.com
+  - - '12'
+    - Jordie
+    - http://www.jordie.org
+    - Another downside is if there is a bug, and you don't know C, you can just jump
+      in and fix it yourself as a PHP programmer.
+    - '12'
+    - '2012-12-05 01:18:29.226926'
+    - '2012-12-05 01:18:29.226926'
+    - jordie@jordie.org
+  - - '13'
+    - Jordie
+    - http://www.jordie.org
+    - ! 'Correction to my last comment: you **can''t** just jump in and fix it yourself.'
+    - '12'
+    - '2012-12-05 01:19:18.40303'
+    - '2012-12-05 02:39:12.016325'
+    - jordie@jordie.org
+  - - '14'
+    - Andrew Weir
+    - http://www.andru.co
+    - ! '@Jordie that is definitely true, although the same goes for most extensions
+      released.'
+    - '12'
+    - '2012-12-05 01:28:54.888046'
+    - '2012-12-05 01:28:54.888046'
+    - andru.weir@gmail.com
+  - - '15'
+    - Alpaca
+    - ''
+    - Great post!
+    - '12'
+    - '2012-12-05 22:58:48.543785'
+    - '2012-12-05 22:58:48.543785'
+    - uniquesx@hotmail.com
+
+---
+users:
+  columns:
+  - id
+  - email
+  - password_digest
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - andru.weir@gmail.com
+    - $2a$10$US8sVOfc4fToyesDd/.Z/u3Nzc5LJj7w2X.WnEPh0ILJ4gKtzRVnW
+    - '2012-11-26 04:30:21.725119'
+    - '2012-11-26 04:30:21.725119'
+
+---
+tags:
+  columns:
+  - id
+  - name
+  records: 
+  - - '1'
+    - meteor
+  - - '2'
+    - polytalk
+  - - '3'
+    - ruby
+  - - '4'
+    - phalcon
+  - - '5'
+    - heroku
+  - - '6'
+    - php
+  - - '7'
+    - angular.js
+  - - '8'
+    - javascript
+  - - '9'
+    - turbolinks
+  - - '10'
+    - jquery
+  - - '11'
+    - css
+  - - '12'
+    - rails
+  - - '13'
+    - caching
+  - - '14'
+    - git
+  - - '15'
+    - node.js
+  - - '16'
+    - site news
+
+---
+taggings:
+  columns:
+  - id
+  - tag_id
+  - taggable_id
+  - taggable_type
+  - tagger_id
+  - tagger_type
+  - context
+  - created_at
+  records: 
+  - - '1'
+    - '1'
+    - '15'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:33:37.547959'
+  - - '2'
+    - '2'
+    - '15'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:33:37.55393'
+  - - '3'
+    - '3'
+    - '15'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:33:37.556836'
+  - - '4'
+    - '2'
+    - '14'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:38:43.657963'
+  - - '5'
+    - '3'
+    - '14'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:38:43.661681'
+  - - '6'
+    - '4'
+    - '13'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:38:55.718971'
+  - - '7'
+    - '5'
+    - '13'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:38:55.72219'
+  - - '8'
+    - '6'
+    - '13'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:38:55.726385'
+  - - '9'
+    - '4'
+    - '12'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:39:12.438519'
+  - - '10'
+    - '6'
+    - '12'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:39:12.441856'
+  - - '11'
+    - '7'
+    - '11'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:39:37.671206'
+  - - '12'
+    - '8'
+    - '11'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:39:37.674086'
+  - - '13'
+    - '8'
+    - '15'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 20:56:04.936218'
+  - - '14'
+    - '8'
+    - '10'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:04:47.254523'
+  - - '15'
+    - '9'
+    - '10'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:04:47.257199'
+  - - '16'
+    - '8'
+    - '9'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:05.441597'
+  - - '17'
+    - '10'
+    - '9'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:05.445031'
+  - - '18'
+    - '11'
+    - '9'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:05.448577'
+  - - '19'
+    - '8'
+    - '8'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:40.647773'
+  - - '20'
+    - '9'
+    - '8'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:40.651289'
+  - - '21'
+    - '12'
+    - '8'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:05:40.654005'
+  - - '22'
+    - '3'
+    - '7'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:04.59434'
+  - - '23'
+    - '5'
+    - '7'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:04.59721'
+  - - '24'
+    - '12'
+    - '7'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:04.59974'
+  - - '25'
+    - '13'
+    - '7'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:04.60201'
+  - - '26'
+    - '13'
+    - '8'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:13.897144'
+  - - '27'
+    - '14'
+    - '6'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:23.373118'
+  - - '28'
+    - '2'
+    - '4'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:47.537162'
+  - - '29'
+    - '3'
+    - '4'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:47.541423'
+  - - '30'
+    - '6'
+    - '4'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:47.544698'
+  - - '31'
+    - '8'
+    - '4'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:47.548863'
+  - - '32'
+    - '15'
+    - '4'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:06:47.551929'
+  - - '33'
+    - '3'
+    - '5'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:07:13.079221'
+  - - '34'
+    - '12'
+    - '5'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:07:13.08283'
+  - - '35'
+    - '16'
+    - '5'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:07:13.085702'
+  - - '36'
+    - '16'
+    - '3'
+    - Page
+    - 
+    - 
+    - tags
+    - '2012-12-09 21:07:23.059408'

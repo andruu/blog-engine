@@ -154,6 +154,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     will_paginate (3.0.3)
     yajl-ruby (1.1.0)
+    yaml_db (0.2.3)
 
 PLATFORMS
   ruby
@@ -187,3 +188,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   unobtrusive_flash!
   will_paginate (~> 3.0.0)
+  yaml_db
