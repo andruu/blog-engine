@@ -598,14 +598,8 @@ table {
     font-size:18px;
   }
   .related-post {
-    opacity:0.7;
     .link a {
       display:block;
-    }
-    @include transition (all 0.2s ease);
-    &:hover {
-      @include transition (all 0.2s ease);
-      opacity:1;
     }
     font-size:14px;
     .info {
@@ -618,7 +612,10 @@ table {
       margin-right:10px;
     }
     &.first, &.second {
-      margin-bottom:20px;
+      // margin-bottom:20px;
+    }
+    &.third, &.fourth {
+     margin-top:20px; 
     }
     .start {
       margin:0;
@@ -989,7 +986,17 @@ ul.small {
     .related-post {
       margin-right: 0;
       width:100%;
+      margin-top:0;
       margin-bottom:10px;
+      &.first, &.third {
+        margin-right:0px;
+      }
+      &.first, &.second {
+        // margin-bottom:20px;
+      }
+      &.third, &.fourth {
+       margin-top:0px; 
+      }
     }
   }
 
