@@ -1,5 +1,8 @@
 class Page < ActiveRecord::Base
-  attr_accessible :body, :has_comments, :title, :slug, :page_type, :is_published
+
+  acts_as_taggable
+
+  attr_accessible :body, :has_comments, :title, :slug, :page_type, :is_published, :tag_list
 
   has_many :comments
 
@@ -11,6 +14,10 @@ class Page < ActiveRecord::Base
   validates :title, presence: true, length: { in: 3..255 }
   validates :slug, presence: true, uniqueness: true, length: { in: 3..255 }
   validates :body, presence: true, length: { minimum: 100 }
+
+  def self.tags_to_a
+    tag_counts.collect { |tag| tag.name }
+  end
 
   def self.text_search(query)
     if query.present?

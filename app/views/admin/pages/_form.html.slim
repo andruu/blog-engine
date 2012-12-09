@@ -11,9 +11,12 @@
   = f.input :page_type, as: :hidden, input_html: { value: params[:type] || @page.try(:page_type) }
   = f.input :has_comments if params[:type] == 'post' || @page.try(:page_type) == 'post'
   = f.input :is_published
+  = f.input :tag_list if params[:type] == 'post' || @page.try(:page_type) == 'post'
   #epiceditor
   = f.input :body, label: false
   .actions 
     = f.submit 'Save Page', class: 'btn'
     | &nbsp;
     = link_to 'Back', admin_pages_path
+
+#tag-list data-tags='#{Page.tags_to_a}'

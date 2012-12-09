@@ -15,8 +15,11 @@
 //= require epiceditor
 //= require jquery.slugify
 //= require css_browser_selector
+//= require select2
 
 $('.slug').slugify('.title');
+
+$('#page_tag_list').select2({containerCssClass: 'myselect2', tags:$('#tag-list').data('tags'), tokenSeparators: [","]});
 
 if ($('#epiceditor').length >= 1) {
   var opts = {

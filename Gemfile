@@ -39,6 +39,8 @@ gem "letter_opener", :group => :development
 gem 'dalli'
 gem 'active_attr'
 gem 'newrelic_rpm', :group => :production
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem "select2-rails"
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

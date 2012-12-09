@@ -1,6 +1,11 @@
 - content_for :title do
  - @page.title
 
+- if @page.page_type == 'post'
+  - content_for :related_posts do
+    - @page.find_related_tags.limit(3).each do |post|
+      li = link_to post.title, page_path(post.slug)
+
 = render @page
 
 - if @page.has_comments
