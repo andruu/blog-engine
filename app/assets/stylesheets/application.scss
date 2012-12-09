@@ -63,6 +63,11 @@ body.dark {
   .comments h3.title, .comment {
     border-color:#222;
   }
+  .related-post-box {
+    h3 {
+      border-bottom:1px solid #222;
+    }
+  }
   .top-stripe {
     background-color:black;
   }
@@ -592,8 +597,8 @@ table {
   margin-bottom:20px;
   h3 {
     border-bottom:1px solid #eee;
-    margin-right:-50px;
-    padding-right:50px;
+    margin-right:-10px;
+    padding-right:10px;
     color:#bbb;
     font-size:18px;
   }
@@ -983,6 +988,10 @@ ul.small {
 
   .related-post-box {
     margin-right:0;
+    h3 {
+      margin-right:-50px;
+      padding-right:50px;
+    }
     .related-post {
       margin-right: 0;
       width:100%;
