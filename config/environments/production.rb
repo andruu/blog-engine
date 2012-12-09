@@ -47,7 +47,7 @@ Blog::Application.configure do
   config.static_cache_control = "public, max-age=31536000"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( admin.js )
+  config.assets.precompile += %w( admin.js admin.scss )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
