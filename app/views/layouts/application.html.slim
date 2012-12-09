@@ -54,11 +54,6 @@ html lang="en"
             li
               a href="http://www.linkedin.com/in/#{Blog::LINKEDIN}" <i class="icon-linkedin"></i> LinkedIn
 
-          - if content_for?(:related_posts)
-            h4.recent <i class="icon-tags"></i> Related Posts
-            ul.related-posts
-              = yield(:related_posts)
-
           h4.recent <i class="icon-time"></i> Recent Posts
           ul.recent-posts
 

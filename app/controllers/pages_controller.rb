@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     return redirect_to root_path unless @page
     @previous_page = @page.previous
     @next_page = @page.next
+    @related_posts = @page.find_related_tags.limit(4)
     @comment = Comment.new
   end
 

@@ -1,15 +1,20 @@
 - content_for :title do
  - @page.title
 
-- if @page.page_type == 'post'
-  - content_for :related_posts do
-    - @page.find_related_tags.limit(3).each do |post|
-      li = link_to post.title, page_path(post.slug)
-
 = render @page
+- if @page.page_type == 'post' && @related_posts.to_a.size > 0
+  .related-post-box
+    h3 Related Posts
+    - @related_posts.each do |post|
+      .related-post class="#{cycle('first', 'second', 'third', 'fourth')}"
+        strong.link = link_to post.title, page_path(post.slug)
+        p.info
+          = post.created_at.to_formatted_s(:proper)
+          | &nbsp; &middot; &nbsp;<i class="icon-comments"></i> #{post.comments_count || 0}
+        p.start == strip_tags(markdown(post.body)).truncate(100, omission: '... (continued)')
 
 - if @page.has_comments
-  .comments#comments
+  .comments#comments class="#{(@related_posts.to_a.size == 0) ? 'no-related' : nil}"
     h3.title <span class="count">#{@page.comments_count || 0}</span> #{'Comment'.pluralize(@page.comments_count)}
     .comment-added
       | Comment successfully added. <a href="#" class="bottom-btn">View comment</a>.
