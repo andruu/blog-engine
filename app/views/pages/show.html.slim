@@ -4,7 +4,7 @@
 = render @page
 - if @page.page_type == 'post' && @related_posts.to_a.size > 0
   .related-post-box
-    h3 Related Posts
+    h3 <i class="icon-tags"></i> Related Posts
     - @related_posts.each do |post|
       .related-post class="#{cycle('first', 'second', 'third', 'fourth')}"
         strong.link = link_to post.title, page_path(post.slug)
