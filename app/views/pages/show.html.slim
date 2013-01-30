@@ -19,17 +19,21 @@
     .comment-added
       | Comment successfully added. <a href="#" class="bottom-btn">View comment</a>.
       | <a href="#" class="close-btn">×</a>
-    .comment-form
-      = simple_form_for @comment, remote: true, html: { 'data-update' => '.comments' } do |f|
-        = f.input :page_id, as: :hidden, input_html: { value: @page.id }
-        = f.input :name, label: false, placeholder: 'name'
-        = f.input :email, label: false, placeholder: 'email'
-        = f.input :url, label: false, placeholder: 'http://'
-        = f.input :comment, label: false, placeholder: 'leave a message...'
-        = f.submit 'Post Comment', class: 'btn add-comment'
-        .remember-me
-          label
-            = check_box_tag 'remember_me', 1, true
-            span Remember Me?
+    - if @page.created_at < 2.weeks.ago
+      .comment-form
+        p Comments are now closed for this article.
+    - else
+      .comment-form
+        = simple_form_for @comment, remote: true, html: { 'data-update' => '.comments' } do |f|
+          = f.input :page_id, as: :hidden, input_html: { value: @page.id }
+          = f.input :name, label: false, placeholder: 'name'
+          = f.input :email, label: false, placeholder: 'email'
+          = f.input :url, label: false, placeholder: 'http://'
+          = f.input :comment, label: false, placeholder: 'leave a message...'
+          = f.submit 'Post Comment', class: 'btn add-comment'
+          .remember-me
+            label
+              = check_box_tag 'remember_me', 1, true
+              span Remember Me?
 
     = render partial: 'comments/comment', collection: @page.comments.order('created_at ASC')
